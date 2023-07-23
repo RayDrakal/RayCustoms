@@ -1,0 +1,166 @@
+#
+CodeEditForm.mainMenu.menuitem_file	파일(&F)
+CodeEditForm.mainMenu.menuitem_open	열기
+CodeEditForm.mainMenu.menuitem_save	저장
+CodeEditForm.mainMenu.menuitem_saveas	다른 이름으로 저장
+CodeEditForm.mainMenu.menuitem_quit	종료
+CodeEditForm.mainMenu.menuitem_setting	도구(&S)
+CodeEditForm.mainMenu.menuitem_showmap	표시/숨김 문서 맵
+CodeEditForm.mainMenu.menuitem_showinput	표시/숨김 텍스트 상자
+CodeEditForm.mainMenu.menuitem_find	스트링 찾기
+CodeEditForm.mainMenu.menuitem_replace	바꾸기
+CodeEditForm.mainMenu.menuitem_setcard	DataBase 세트
+CodeEditForm.mainMenu.menuitem_help	도움말(&H)
+CodeEditForm.mainMenu.menuitem_about	정보
+#
+DataEditForm.btn_img	이미지 삽입
+DataEditForm.lb_types	카드 종류
+DataEditForm.lb_markers	링크 마커
+DataEditForm.lb_tiptexts	Script 텍스트
+DataEditForm.lb_categorys	카테고리
+DataEditForm.lb_cardcode	코드
+DataEditForm.lb_cardalias	같은 코드
+DataEditForm.lb_atkdef	ATK/DEF
+DataEditForm.lb_pleft_right	P스케일
+DataEditForm.btn_reset	리셋
+DataEditForm.btn_lua	Script
+DataEditForm.btn_serach	검색
+DataEditForm.btn_del	삭제
+DataEditForm.btn_undo	되돌리기
+DataEditForm.btn_mod	수정
+DataEditForm.btn_add	추가
+DataEditForm.btn_PageDown	다음
+DataEditForm.btn_PageUp	이전
+DataEditForm.lv_cardlist.0	카드 코드
+DataEditForm.lv_cardlist.1	카드 이름
+DataEditForm.mainMenu.menuitem_file	파일(&F)
+DataEditForm.mainMenu.menuitem_open	열기(&O)
+DataEditForm.mainMenu.menuitem_new	새로 만들기(&N)
+DataEditForm.mainMenu.menuitem_copyselectto	선택된 부분 복사...
+DataEditForm.mainMenu.menuitem_copyto	전체 복사...
+DataEditForm.mainMenu.menuitem_openLastDataBase	최근 DataBase 열기
+DataEditForm.mainMenu.menuitem_quit	종료
+DataEditForm.mainMenu.menu_image	MSE(&M)
+DataEditForm.mainMenu.menuitem_importmseimg	MSE'이미지 set
+DataEditForm.mainMenu.menuitem_mseconfig	MSE 설정 set
+DataEditForm.mainMenu.menu_data	데이터(&D)
+DataEditForm.mainMenu.menuitem_operacardsfile	Opera와 카드 파일
+DataEditForm.mainMenu.menuitem_openfileinthis	Script와 CodeEditor 열기
+DataEditForm.mainMenu.menuitem_findluafunc	LUA 기능 찾기
+DataEditForm.mainMenu.menuitem_readydk	ydk 파일로 읽기(&Y)
+DataEditForm.mainMenu.menuitem_readimages	이미지 주소로 읽기(&I)
+DataEditForm.mainMenu.menuitem_compdb	DataBase 압축
+DataEditForm.mainMenu.menuitem_exportdata	zip으로 추출하기
+DataEditForm.mainMenu.menuitem_readmse	MSE-set 읽기
+DataEditForm.mainMenu.menuitem_saveasmse_select	선택된 MSE-set 저장
+DataEditForm.mainMenu.menuitem_saveasmse	전체 MSE-set 저장
+DataEditForm.mainMenu.menuitem_cutimages	이미지 자르기
+DataEditForm.mainMenu.menuitem_convertimage	이미지 변환
+DataEditForm.mainMenu.menuitem_exportMSEimage	mse-set로 이미지 추출(클릭 멈춤)
+DataEditForm.mainMenu.menuitem_cancelTask	작업 취소
+DataEditForm.mainMenu.menuitem_testpendulumtext	펜듈럼 텍스트 테스트
+DataEditForm.mainMenu.menuitem_export_all_sql	sql 전부 추출
+DataEditForm.mainMenu.menuitem_export_select_sql	sql 선택 추출
+DataEditForm.mainMenu.menuitem_help	도움말(&H)
+DataEditForm.mainMenu.menuitem_about	정보
+DataEditForm.mainMenu.menuitem_language	언어
+DataEditForm.mainMenu.menuitem_checkupdate	업데이트 확인
+DataEditForm.mainMenu.menuitem_autocheckupdate	자동 업데이트 확인
+DataEditForm.mainMenu.menuitem_github	GitHub 소스 코드
+DataEditForm.mainMenu.menuitem_autoreturn	(특수 기능)중문 자동 줄바꿈
+#
+MainForm.mainMenu.menuitem_file	파일(&F)
+MainForm.mainMenu.menuitem_open	열기
+MainForm.mainMenu.menuitem_new	새로 만들기
+MainForm.mainMenu.menuitem_save	저장
+MainForm.mainMenu.menuitem_copyselect	선택된 부분 복사
+MainForm.mainMenu.menuitem_copyall	전체 복사
+MainForm.mainMenu.menuitem_pastecards	카드 붙여넣기
+MainForm.mainMenu.menuitem_comp1Set Database 1 비교
+MainForm.mainMenu.menuitem_comp2Set Database 2 비교
+MainForm.mainMenu.menuitem_history	DataBase 기록
+MainForm.mainMenu.menuitem_shistory	Script 기록
+MainForm.mainMenu.menuitem_quit	종료
+MainForm.mainMenu.menuitem_windows	창(&W)
+MainForm.mainMenu.menuitem_dataeditor	DataEditor
+MainForm.mainMenu.menuitem_codeeditor	CodeEditor
+MainForm.mainMenu.menuitem_close	닫기
+MainForm.mainMenu.menuitem_closeother	다른 것만 닫기
+MainForm.mainMenu.menuitem_closeall	전부 닫기
+#
+0x0	정보
+0x1	에러
+0x2	경고
+0x3	질문
+0x4	만들기 성공!
+0x5	만들기 실패!
+0x6	추가 성공!
+0x7	추가 실패!
+0x8	코드가 0일 수 없습니다!
+0x9	이미 존재합니다!
+0xa	바꿀 수 없습니다.
+0xb	카드를 삭제하겠습니까(s)?
+0xc	Script 파일을 만들겠습니까?
+0xd	database를 열겠습니까?
+0xe	이미 존재하는데, 카드를 바꾸겠습니까?
+0xf	업데이트가 있습니다.\n다운로드를 다시 하겠습니까?
+0x10	업데이트 확인 실패했습니다. 네트워크를 확인하십시오.
+0x11	새 버전을 발견했습니다.\n다운로드하겠습니까?
+0x12	파일이 존재하지 않습니다!
+0x13	database를 선택하지 않았습니다!
+0x14	database 파일 선택
+0x15	ydk 파일 선택
+0x16	이미지 폴더 선택
+0x17	다운로드 완료!
+0x18	다운로드 실패?
+0x19	선택된 Script 텍스트가 없습니다!
+0x1a	삭제 성공!
+0x1b	삭제 실패!
+0x1c	수정 성공!
+0x1d	수정 실패!
+0x1e	정보  : 
+0x1f	버전: 
+0x20	저자 : 
+0x21	cdb 파일(*.cdb)|*.cdb|모든 파일(*.*)|*.*
+0x22	ydk 파일(*.ydk)|*.ydk|모든 파일(*.*)|*.*
+0x23	SetCode 입력 오류?
+0x24	카드 이미지 선택
+0x25	jpg(*.jpg)|*.jpg|bmp(*.bmp)|*.bmp|png(*.png)|*.png|모든 파일(*.*)|*.*
+0x26	작업중입니다.
+0x27	업데이트 확인중...
+0x28	Database 복사중...
+0x29	Database 복사 확인
+0x2a	Mse-set 파일 저장
+0x2b	MSE set(*.mse-set)|*.mse-set|모든 파일(*.*)|*.*
+0x2c	Mse-set 추출중
+0x2d	Mse-set 추출 확인
+0x2e	이미지 자르는 중...
+0x2f	이미지 자르기 확인
+0x30	선택된 카드가 없습니다
+0x31	이미지가 존재하는데 바꾸겠습니까?
+0x32	이미지 변환중
+0x33	이미지 변환 확인
+0x34	DataBase 압축 확인
+0x35	세트의 텍스트만 업데이트하겠습니까?
+0x36	작업 취소
+0x37	작업 멈춤
+0x38	작업 재개
+0x39	작업 오류
+0x3a	작업을 취소하겠습니까?
+0x3b	복사 성공
+0x3c	붙여넣기 성공
+0x3d	기록 비우기
+0x3e	데이터 추출
+0x3f	데이터 추출 확인
+0x40	카드 텍스트 비교하겠습니까?
+0x41	카드 비교 성공
+0x42	파일 열기
+0x43	Script(*.lua)|*.lua|모든 파일(*.*)|*.*
+0x44	새 파일
+0x45	저장 확인
+0x46	Script를 저장하겠습니까?
+0x47	MSE-set 읽기
+0x48	MSE-set 읽기 확인.
+0x49	적용하려면 프로그램을 재시작하십시오.
+0x4a	Mse-set로 이미지 추출 확인.
+0x4b	Mse-set로 이미지 추출 실패.

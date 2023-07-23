@@ -1,0 +1,935 @@
+﻿mse version: 2.0.0
+installer group: translations/korean
+full name: 한국어 (Korean)
+version: 2013-08-13
+icon: ko.png
+
+############################################################## Menu items
+menu:
+	file:			&파일
+	new set:			&새롭게 만들기...	Ctrl+N
+	open set:			&열기...	Ctrl+O
+	save set:			&저장하기	Ctrl+S
+	save set as:		이름 적고 저장하기...	F12
+	export:				&추출
+	export html:			&HTML...
+	export image:			카드&이미지...
+	export images:			모든 카드&이미지...
+	export apprentice:		&Apprentice...
+	export mws:				&Magic Workstation...
+	check updates:		업데이트 체크...
+	print preview:		인쇄 미리보기...
+	print:				&인쇄...	Ctrl+P
+	reload data:		다시 읽기	Ctrl+F5
+	show profiler:		프로파일러 보기	Ctrl+F6
+	exit:				종료	Alt+F4
+	
+	edit:			&편집
+	undo:				&되감기%s	Ctrl+Z
+	redo:				&빨리감기%s	Ctrl+Y
+	cut:				자르기	Ctrl+X
+	copy:				&복사	Ctrl+C
+	paste:				&붙여놓기	Ctrl+V
+	find:				&찾기	Ctrl+F
+	find next:			다음으로 찾기	F3
+	replace:			바꿔놓기	Ctrl+H
+	auto replace:		자동으로 바꿔놓기...
+	preferences:		&설정...
+	
+	cards:			&카드
+	previous card:		이전의 카드를 선택	PgUp
+	next card:			다음의 카드를 선택	PgDn
+	add card:			&카드를 추가하기	Ctrl+Enter
+	add cards:			&여러 카드를 추가하기...
+	remove card:		&카드를 제거하기
+	orientation:		&카드의 방향
+	rotate 0:				&표준
+	rotate 270:				&우측으로 90°회전
+	rotate 90:				좌측으로 90°회전
+	rotate 180:				180°회전
+	card list columns:	카드 리스트 표시 설정...
+	
+	keywords:		&키워드
+	previous keyword:	이전 키워드를 선택	PgUp
+	next keyword:		다음 키워드를 선택	PgDn
+	add keyword:		&키워드를 추가하기		Ctrl+Enter
+	remove keyword:		&키워드를 지우기	Del
+	
+	format:			&형식
+	bold:				&굻게 하기	Ctrl+B
+	italic:				&기울임	Ctrl+I
+	symbols:			&기호	Ctrl+M
+	reminder text:		&주석문	Ctrl+R
+	insert symbol:		기호 삽입
+	# spelling
+	no spelling suggestions:	(no suggestions)
+
+	graph:			&그래프
+	pie:				&원형 그래프	1
+	bar:				&막대 그래프	2
+	stack:				&적층 막대	3
+	scatter:			&뿌리기	4
+	scatter pie:		&원령 뿌리기		5
+	
+	window:			&창
+	new window:			&새로운 창
+	cards tab:			&카드	F5
+	set info tab:		&세트 정보	F6
+	style tab:			스타일	F7
+	keywords tab:		&키워드		F8
+	stats tab:			통계	F9
+	random pack tab:	&랜덤 팩
+	console tab:		&콘슬	Ctrl+F9
+	
+	help:			&도움말
+	index:				&색인...	F1
+	website:			&Magic Set Editor의 웹사이트로 가기...
+	about:				&Magic Set Editor에 대하여...
+	
+	# symbol editor
+	
+	new symbol:			&새로 만들기...	Ctrl+N
+	open symbol:		&열기...	Ctrl+O
+	save symbol:		&저장하기	Ctrl+S
+	save symbol as:		이름을 적고 저장하기...	F12
+	store symbol:		적용	Ctrl+Enter
+	close symbol editor:닫기	Alt+F4
+	
+	duplicate:			&복제	Ctrl+D
+	group:				&그룹화	Ctrl+G
+	ungroup:			&그룹화를 제거	Ctrl+U
+	
+	tool:			&도구
+	select:				&선택	F5
+	rotate:				&회전	F6
+	points:				&포인트	F7
+	basic shapes:		&기본 도형	F8
+	symmetry:			대칭	F9
+	paint:				페인트	F10
+	
+############################################################## Menu help texts
+help:
+	welcome:			Magic Set Editor 2에 오신것을 환영합니다
+	
+	file:
+	new set:			새로운 세트로 제작합니다.
+	open set:			저장된 세트를 불러옵니다.
+	last opened set:	최근의 '%s' 를 불러옵니다. 
+	save set:			현재의 세트를 저장합니다.
+	save set as:		현재의 세트를 새로운 이름으로 저장합니다.
+	export:				추출하기...
+	export html:			현재의 세트를 HTML형식으로 추출합니다.
+	export image:			만들어진 카드의 이미지를 추출합니다.
+	export images:			모든 카드의 이미지를 추출합니다.
+	export apprentice:		현재의 세트를 Apprentice32형식으로 추출합니다.
+	export mws:				현재의 세트를 Magic Workstation형식으로 추출합니다.
+	check updates:		새로운 스타일과 언어 파일 등을 다운로드 하기 위해 창을 닫습니다.
+	print preview:		인쇄 미리보기 화면을 보여줍니다.
+	print:				이 세트를 인쇄합니다.
+	reload data:		모든 탬플릿 파일과 현재의 세트를 다시 불러옵니다.
+	show profiler:		Show the profiler window, with timings of (script) functions. Used for optimization.
+	exit:				Magic Set Editor를 종료합니다.
+	
+	edit:
+	undo:				지금의 작업에서 되돌립니다.
+	redo:				지금의 작업에서 앞으로갑니다。
+	cut:				선택한 텍스트를 클립 보드로 이동합니다.
+	cut card:			선택한 카드를 클립 보드로 이동합니다.
+	cut keyword:		선택한 키워드 능력을 클립 보드로 이동합니다.
+	copy:				선택한 텍스트를 클립 보드로 복사합니다.
+	copy card:			선택한 카드를 클립 보드로 복사합니다.
+	copy keyword:		선택한 키워드 능력을 클립 보드로 복사합니다.
+	paste:				클립 보드의 텍스트를 붙여 놓습니다.
+	paste card:			클립 보드의 카드를 붙여 놓습니다.
+	paste keyword:		클립 보드의 키워드 능력을 붙여 놓습니다.
+	find:				카드 텍스트에서 지정한 텍스트를 검색합니다.
+	find next:			다음에 적합한 텍스트를 검색합니다.
+	replace:			카드 텍스트에서 지정한 텍스트를 대체합니다.
+	auto replace:		텍스트를 자동으로 대체하겠습니까?
+	preferences:		Magic Set Editor의 설정을 변경합니다.
+	
+	cards:
+	previous card:		리스트 이전의 카드를 선택합니다.
+	next card:			리스트 다음의 카드를 선택합니다.
+	add card:			새로운 카드를 현재의 세트에 추가합니다.
+	add cards:			여러 카드를 현재의 세트에 추가합니다.
+	remove card:		현재 세트에서 선택된 카드를 제거합니다.
+	orientation:		표시되는 카드의 방향을 변경합니다.
+	rotate card:			카드를 우측으로 90°회전하여 표시합니다.
+	rotate 0:				카드를 회전하지 않은 상태로 표시합니다.
+	rotate 270:				카드를 우측으로 90°회전하여 푯시합니다.
+	rotate 90:				카드를 좌측으로 90°화전하여 표시합니다.
+	rotate 180:				카드를 180°회전하여 표시합니다.
+	card list columns:	표시할 열을 설정합니다.
+	
+	keywords:
+	previous keyword:	리스트 이전의 키워드 능력을 선택합니다.
+	next keyword:		리스트 다음의 키워드 능력을 선택합니다.
+	add keyword:		새로운 키워드 능력을 현재의 세트에 추가합니다.
+	remove keyword:		현재의 세트에서 선택한 키워드 능력을 제거합니다.
+	
+	format:
+	bold:				선택한 텍스트를 굵게 합니다.
+	italic:				선택한 텍스트를 기울게 합니다.
+	symbols:			선택한 기호를 마나 기호나 기호로 합니다.
+	reminder text:		선택한 키워드 능력에 대한 주석문을 표시합니다.
+	# spelling
+	no spelling suggestions:	There are no suggestions for correcting this error
+
+	graph:
+	pie:				원형 그래프, 슬라이스 크기의 카드 수를 표시합니다.
+	bar:				막대 그래프, 막대의 높이의 카드 수를 표시합니다.
+	stack:					막대 그래프를 겹친 막대
+	scatter:			산정도는 카드 크기의 수를 나타냅니다.
+	scatter pie:		각 아이템을 뿌릴 그림에 작은 원형 그래프를 말합니다.
+	
+	window:
+	new window:			같은 세트를 편집하기 위해 또 다른 창을 표시합니다.
+	cards tab:			현재 세트의 카드를 편집합니다.
+	set info tab:		현재 세트에 대한 정보를 표시합니다.
+	style tab:			현재 카드의 스타일을 변경합니다.
+	keywords tab:		현재 세트를 위한 키워드 능력을 정의합니다.
+	stats tab:			현재 세트의 통계를 표시합니다.
+	random pack tab:	Try how the set works out in practice by generating random booster packs.
+	console tab:		Shows error messages and allows executing script commands.
+	
+	help:
+	index:				
+	website:			
+	about:				
+	
+	# Cards panel
+	collapse notes:		Hide the card notes box
+	expand notes:		Show the card notes box
+	# Random pack panel
+	random seed:		Different packs will be generated each time.
+	fixed seed:			Using the same seed number gives the same 'random' packs.
+	seed:				Seed number for the random generator. Using the same seed number gives the same 'random' packs.
+	edit pack type:		Double click to edit pack type
+	number of packs:	The number of %ss to generate
+	
+	# Preferences
+	app language:
+		주의: 변경 사항을 적용하기 위해서는 Magic Set Editor를 다시 시작해야 합니다.
+	zoom export:
+		(이 체크 박스가 꺼져 있는 경우
+		내보낸 이미지 회전 및 확대 적용되지 않습니다.)
+	
+	# apprentice export
+	set code:			설정된 코드는 Apprentice에 의해 세트를 참조하는데 사용되는 두 캐릭터의 코드입니다.
+	
+	# Symbol editor
+	new symbol:			새로운 세트 심볼을 제작합니다.
+	open symbol:		저장된 세트 심볼을 불러옵니다.
+	save symbol:		현재의 세트 심볼을 저장합니다.
+	save symbol as:		현재의 세트 심볼을 다른 이름으로 저장합니다.
+	store symbol:		현재의 세트 심볼을 현재의 세트로 사용하십시오.
+	close symbol editor:심볼 에디터를 종료합니다.
+	
+	duplicate:			선택한 도형을 복사합니다.
+	group:				선택한 도형을 그룹화합니다.
+	ungroup:			선택한 그룹을 해제합니다.
+	
+	grid:				그리드의 표시/비표시를 변경합니다.
+	snap:				도형과 포인트를 그리드에 맞추어 선택합니다.
+	
+	tool:
+	select:				도형을 선택합니다.
+	rotate:				도형을 회전합니다.
+	points:				도형을 편집하기 위한 포인트를 지정합니다.
+	basic shapes:		직사각형이나 원형 등의, 기본적인 도형을 묘사합니다.
+	symmetry:			대상선을 추가합니다.
+	paint:				페인트 브러쉬 도구를 사용하여 도형을 페인트칠합니다.
+	
+	select editor:
+	merge:				それの下でこの形をそれらと合併させます
+	subtract:			それの下の形からこの形を引いて、すなわちこの形でエリアだけをその形に残します
+	intersect:			それ、両方のエリアだけが形成する葉の下の形でのこの形を横切ります
+	difference:			異なってそれの下の形からのこの形、エリアだけを少しの他の形にも残します
+	overlap:			それの下の形の上にこの形と、その縁を置いてください
+	border:				縁としてのこの形を引きます
+	
+	drag to shear:		刈るべき牽引は選ばれています %s
+	drag to rotate:		回転させるべき牽引は選ばれています %s, Ctrlは15度の倍数に角度を制限します
+	drag to resize:		サイズを変更すべき牽引選ばれて %s、Ctrlがサイズを制限します
+	click to select shape:	形を選ぶクリック、形を動かす牽引、形を編集する二重のクリック
+	
+	ellipse:			円と長円を引いてください
+	rectangle:			広場と長方形を引いてください
+	polygon:			三角形、五角形、及び他の通常の多角形を引いてください
+	star:				星を引いてください
+	sides:				多角形あるいは星の点の側面の数
+	drag to draw shape:	形のサイズを変更するために引きずられてください、Ctrlが形を制限して、シフトが形を中心に置きます
+	draw ellipse:		クリック及び長円を引く牽引、円のためのCtrlを開いてください
+	draw rectangle:		クリック及び長方形を引く牽引、広場のためのCtrlを開いてください
+	draw polygon:		クリック及び多角形を引く牽引
+	draw star:			クリック及びスターのために引くべき牽引
+	
+	line segment:		選ばれたラインセグメントをまっすぐにします
+	curve segment:		選ばれたラインセグメントが曲げた型式
+	free point:			ポイントの2つのコントロールポイントが自由に動かされることを許します
+	smooth point:		お互いの反対側に2つのコントロールポイントを置くことによって選ばれたポイント〔点〕を滑らかにします
+	symmetric point:	選ばれたポイント映した型式
+	drag to move curve:	カーブを動かす牽引
+	drag to move line:	Alt +変えるべき牽引は曲がります；  このラインの上の1ポイントを加えるためにダブルクリックしてください
+	drag to move point:	クリック及び変えるべき牽引コントロールポイント；  ポイントを取り除くためにダブルクリックしてください
+	
+	rotation:			対称(車輪〔ハンドル〕)を回転させること
+	reflection:			対称(鏡)を反映すること
+	add symmetry:		対称をシンボル〔記号〕に加えてください
+	remove symmetry:	この対称を取り除いてください
+	copies:				(オリジナルを含む)数の反映
+	
+	# Card select
+	filename format:	(カードの名前のための使用{card.name}；  ファイルフォーマットが決定される　延長に基づいて　)
+
+############################################################## Toolbar
+tool:
+	undo:				되돌리기
+	redo:				빨리감기
+	
+	cards tab:			카드
+	set info tab:		세트 정보
+	style tab:			스타일
+	keywords tab:		키워드
+	stats tab:			통계
+	random pack tab:	랜덤
+	console tab:		콘슬
+	
+	# symbol editor
+	store symbol:		사용합니다
+	
+	grid:				격자〔그리드〕
+	snap:				쉬은 일
+	
+	select:				선택합니다
+	rotate:				회전합니다
+	points:				포인트〔점〕
+	basic shapes:		기본적인 형태
+	symmetry:			대칭
+	paint:				페인트
+	
+	merge:				결합
+	subtract:			당깁니다
+	intersect:			교차합니다
+	difference:			다름
+	overlap:			오버랩
+	border:				보더
+	
+	ellipse:			타원
+	rectangle:			직사각형
+	polygon:			다각형
+	star:				별형
+	
+	rotation:			회전
+	reflection:			반사
+	add symmetry:		추가합니다
+	remove symmetry:	제거
+	
+	line segment:		라인
+	curve segment:		곡선
+	free point:			해방합니다
+	smooth point:		매끄럽게합니다
+	symmetric point:	대칭합니다
+	
+############################################################## Toolbar help text
+tooltip:
+	cards tab:			
+	set info tab:		세트 정보
+	style tab:			
+	keywords tab:		
+	stats tab:			
+	random pack tab:	랜덤 팩
+	console tab:		
+	
+	new set:			새로 제작
+	open set:			열기
+	save set:			저장
+	export:				추출
+	
+	cut:				자르기
+	copy:				복사하기
+	paste:				붙여넣기
+	undo:				뒤로%s
+	redo:				앞으로%s
+	
+	add card:			카드를 추가
+	remove card:		선택한 카드를 제거
+	rotate card:		카드 회전
+	
+	add keyword:		카워드 추가
+	remove keyword:		키워드 제거
+	
+	bold:				대문자
+	italic:				기울기
+	symbols:			기호
+	reminder text:		주석
+
+	pie:				원형 그래프
+	bar:				막대 그래프
+	stack:				축적 막대 그래프
+	scatter:			산포도
+	scatter pie:		산란-파이 플롯
+	
+	cards tab:			
+	set info tab:		세트 정보
+	style tab:			스타일
+	keywords tab:		
+	stats tab:			
+	
+	# symbol editor
+	store symbol:		사용 세트 기호
+	
+	grid:				그리드
+	snap:				그리드에 맞춤
+	
+	select:				고른다 (F5)
+	rotate:				회전한다 (F6)
+	points:				Points (F7)
+	basic shapes:		기본적인 형태 (F8)
+	symmetry:			대칭 (F9)
+	paint:				형태 위의 도료 (F10)
+	
+	merge:				아래의 형태와 합치세요
+	subtract:			아래의 형태로 빼세요
+	intersect:			아래의 형태로 서로 나누세요
+	difference:			아래의 형태와 다르게 하세요
+	overlap:			다른 형태의 윗자리
+	border:				가장자리로 하기
+	
+	ellipse:			타원
+	rectangle:			직사각형
+	polygon:			다각형
+	star:				별
+	
+	rotation:			대칭을 회전시키는 것
+	reflection:			대칭을 변형하는 것
+	add symmetry:		대칭을 뽑힌 부분에 더합니다
+	remove symmetry:	이 대칭을 제거하세요
+	
+	line segment:		적선 부분에 라인
+	curve segment:		돌기 위해서
+	free point:			자물쇠를 여는 것을 의미
+	smooth point:		포인트를 매끄럽게 하세요
+	symmetric point:	포인트를 대칭적으로 하세요
+
+############################################################## Labels in the GUI
+label:
+	# Cards tab
+	card notes:			카드 메모：
+	search cards:		카드를 찾는중...
+	
+	# Keywords tab
+	search keywords:	키워드를 찾는중...
+	keyword:			키워드
+	match:				적합
+	mode:				모드
+	uses:				사용
+	reminder:			주석문
+	rules:				추가 규칙
+	standard keyword:
+		이는 표준 [%s]의 키워드 능력이기 때문에 편집할 수 없습니다.
+		당신이 이것의 키워드를 복사했다 해도, 이쪽이 우선됩니다.
+	
+	# Style tab
+	styling options:	스타일 옵션
+	
+	# Random pack panel
+	pack selection:		팩 선택
+	pack totals:		모든 팩
+	pack name:			팩 이름
+	seed:				시드
+	total cards:		모든 카드
+	
+	# Open dialogs
+	all files			모든 파일
+	
+	# Other set window dialogs
+	save changes:
+		세트'%s'가 바뀌었습니다.
+		
+		당신은 변경 내용을 저장하겠습니까?
+	
+	# New set window
+	game type:			&게임 타입：
+	style type:			&카드 스타일：
+	
+	stylesheet not found:
+		당신이 시작하려는 세트가 스타일 시트를 사용합니다 "%s"。
+		이 스타일 시트가 당신의 시스템에서 발견할 수 없고, 선택 사항을 선택하십시오.
+	
+	# Preferences
+	language:			언어
+	windows:			세트 열기
+	app language:		사용자 인터페이스의 언어：
+	card display:		카드 표시
+	zoom:				&줌：
+	percent of normal:	정상적인 크기의 퍼센트값
+	external programs:	외부 프로그램
+	apprentice:			&Apprentice：
+	apprentice exe:		Apprentice를 실행합니다
+	check at startup:	기동별 버젼 체크
+	checking requires internet:
+		업데이트를 조사하는 것은 인터넷 접속을 필요로 합니다.
+		인터넷 접속이 이용 가능하지 않을 때, 이는 체크되지 않습니다.
+		
+		정보는 업데이트를 읽을 때, 모아지지 않습니다.
+	
+	# Column select
+	select columns:		당신이 표시하고 싶은 줄을 고르시오
+	columns:			열：
+	
+	# Card select / images export
+	select cards:			Cards to export
+	selected card count:	%s cards will be exported.
+	select cards print:	당신이 인쇄하고 싶은 카드를 고르세요.
+	filename format:	&포맷： 
+	filename conflicts:	&손잡이를 복사할 파일 이름：
+	export filenames:	파일 이름
+	filename is ignored: (파일 이름은 무시됩니다)
+	
+	# apprentice export
+	set code:			세트 코드：
+	apprentice export cancelled: Apprentice에 대한 변환을 취소합니다
+	
+	# Html export
+	html template:		템플릿：
+	html export options:내보내기 옵션
+	
+	# Image slicer
+	original:			오리지널：
+	result:				결과：
+	size:				크기
+	original size:			&Original Size
+	size to fit:			Size to &Fit
+	force to fit:			F&orce to Fit
+	custom size:			&Custom Size
+	selection:			선택
+	selection left:			&Left
+	selection top:			&Top
+	selection width:		&Width
+	selection height:		&Height
+	zoom:				줌
+	fix aspect ratio:		Fix aspect ratio (width/height)
+	zoom amount:			Zoom
+	zoom amount x:			Zoom &X
+	zoom amount y:			Zoom &Y
+	zoom %:					%
+	filter:				필터
+	sharpen filter:			&Sharpen filter
+	
+	# Auto replace
+	auto match:			적합
+	auto replace:		바꿔놓음
+	
+	# Symbol editor
+	sides:				사이드
+
+	# Packages window
+	package name:				패키지
+	package status:				지위
+	package action:				액션
+	
+	package conflicts:		경합하는 변경
+	package modified:		로컬 변경
+	package updates:		이용 가능한 갱신 프로그램
+	package installed:		설치
+	package installable:	설치할 수 있습니다
+	install package:		설치
+	reinstall package:		재설치
+	upgrade package:		업데이트
+	remove package:			제거하기
+
+	installed version:		설치된 버전:
+	installable version:	마지막 버전:
+	installer size:			크기:
+	installer status:		상태:
+	no version:				-
+ 
+############################################################## Buttons/checkboxes/choices in the GUI
+button:
+	# Editor
+	edit symbol:		편집한다
+	symbol gallery:		갤러리
+	
+	# Style panel
+	use for all cards:	&모든 카드에 이 스타일을 사용
+	use custom styling options: 현재의 옵션을 이 카드에만 적용한다
+	
+	# Keywords panel
+	insert parameter:	패러미터 삽입...
+	refer parameter:	패러미터를 사용한다...
+	
+	# Random pack panel
+	generate pack:		&Generate Pack
+	random seed:		&Random Seed
+	fixed seed:			&Fixed Seed
+	add custom pack:	Add &Custom Pack...
+	
+	# Console panel
+	evaluate:			&Evaluate
+	
+	# Welcome
+	new set:			신규 작성
+	open set:			세트 열기
+	check updates:		갱신 체크
+	last opened set:	마지막 세트
+	
+	# Preferences
+	open sets in new window:	Open all sets in a new &window
+	select:				&선택...
+	browse:				&참조...
+	high quality:		&고품질 이미지
+	show lines:			편집 필드의 선을 표시한다
+	show editing hints:	편집시에 박스와 힌트를 표시한다
+	zoom export:		내보내기때에 줌과 회전의 설정을 사용한다.
+	spellcheck enabled:	Show &spelling errors on cards
+	check now:			&지금 체크
+	always:							항상 실행한다
+	if internet connection exists:	인터넷에 접속한다면
+	never:							실행하지 않는다
+	
+	# Column select
+	move up:			위로 이동
+	move down:			아래로 이동
+	show:				&표시
+	hide:				&비표시
+	
+	# Card select
+	export entire set:				Entire set
+	export generated packs:			Generated packs
+	export custom cards selection:	Custom selection
+	select cards:		&Select Cards...
+	select all:			&모두 선택
+	select none:		&선택 제거
+	overwrite:			오래된 파일을 덮어쓴다
+	keep old:			오래된 파일을 유지한다
+	number:				번호를 파일명에 다힌디
+	number overwrite:	이전에 내보낸 파일에 덮어스기, 번호를 파일에 더한다
+	
+	# Auto replace
+	use auto replace:	자동 변경을 사용한다
+	add item:			&추가
+	remove item:		&제거
+	defaults:			&초기화
+	enabled:			가능한 것
+	whole word:			적합한 것
+
+	# Old style update checker  (NOTE: this will be removed in a feature version)
+	close:				&닫기
+	
+	# Packages window
+	keep package:			&는 변경하지 않는다
+	don't install package:	&는 설치하지 않는다
+	install package:		&설치
+	upgrade package:		&업그레이드
+	reinstall package:		&재설치
+	remove package:			&제거하기
+	install group:			&모두 설치
+	upgrade group:			&모두 업그레이드
+	remove group:			&모두 제거
+
+############################################################## Titles in the GUI
+title:
+	magic set editor:	Magic Set Editor
+	%s - magic set editor:	%s - Magic Set Editor
+	untitled:			Untitled
+	about:				Magic Set Editor에 대하여
+	symbol editor:		기호 에디터
+	# dialogs
+	new set:			신규 작성
+	open set:			열기
+	save set:			세트 저장
+	save image:			이미지 저장
+	updates available:	업데이트가 가능합니다.
+	save changes:		변경을 저장합니까?
+	select stylesheet:	스타일 시트 선택
+	#preferences
+	preferences:		설정
+	global:					지구 설정
+	display:				표시 설정
+	directories:			디렉토리 설정
+	updates:				업데이트
+	update check:			업데이트 체크
+	locate apprentice:		Apprentice 찾음
+	# select
+	select columns:		열 선택
+	select cards:		카드 선택
+	select cards export:카드 추출 선택
+	# slice
+	slice image:		이미지 편집
+	# pack
+	custom pack:		커스텀 팩 타입
+	# print
+	print preview:		인쇄 미리보기
+	# export
+	export images:		이미지 추출
+	export cancelled:	추출 취소
+	export html:		HTML으로 추출
+	save html:			HTML으로 저장
+	# auto replace
+	auto replaces:		자동 변경
+	
+	# Package Update Window
+	packages window:	패키지 관리자
+	installing updates:	갱신 프로그램 설치
+	
+	cannot create file:	파일을 제작할 수 없습니다.
+
+############################################################## Action (undo/redo) names
+action:
+	# List boxes
+	add item:			추가하기 %s
+	remove item:		제거하기 %s
+
+	# Text editor
+	typing:				타이핑
+	enter:				입력하기
+	soft line break:	유화 노선 중단
+	insert symbol:		삽입물 상징 [기호]
+	backspace:			백 스페이스
+	delete:				제거하기
+	cut:				자르기
+	paste:				붙여놓기
+	auto replace:		자동 변경한다
+	correct:			Spelling Correction
+	# Choice/color editors
+	change:				변화 %s
+	
+	# Symbol Actions
+	move:				이동하기 %s
+	rotate:				회전하기 %s
+	shear:				전단 %s
+	scale:				크기 변경하기 %s
+	duplicate:			복사 %s
+	reorder parts:		재주문
+	change combine mode:변화 연합체 모드
+	change shape name:	변형 이름
+	group parts:		그룹
+	ungroup parts:		나누기
+	
+	# Symbol Part Actions
+	convert to line:	선 변환
+	convert to curve:	곡선 변환
+	lock point:			잠금 포인트
+	move handle:		이동 손잡이
+	move curve:			곡선 이동
+	add control point:	추가할 컨트롤 포인트
+	delete point:		포인트를 제거한다
+	delete points:		포인트를 제거하십시오
+	
+	# Symmetry
+	add symmetry:			대칭을 추가하십시오
+	#remove symmetry:		대칭을 제거하십시오
+	move symmetry center:	움직음 대칭 센터
+	move symmetry handle:	변화 대칭 오리엔테이션
+	change symmetry type:	변화 대칭 유형
+	change symmetry copies:	수의 반영
+	
+############################################################## Error messages
+error:
+	# File related
+	file not found:				발견되지 않은 파일： '%s' 패키지에서 '%s'
+	file not found package like:
+		파일을 찾을 수 없습니다 '%s' 패키지의 '%s'
+		하려고 하는 경우는 다른 패키지에서 파일을 열어 사용하는 "/패키지/파일 이름"
+	file parse error:
+		파일 퍼스 오류： '%s'
+		%s
+	package not found:			발견되지 않은 패키지： '%s'
+	package out of date:		패키지 '%s' (버전 %s) 오래되어서 그렇습니다　버전　%s　이(가) 필요합니다.
+	package too new:			패키지e '%s' (버전 %s) 버전과 호환되지 않는 %s, 요구되는 '%s'
+	unable to open output file:	축적된 오류는 출력 파일을 열 수 없게 합니다
+	unable to store file:		축적된 오류는 파일을 저장할 수 없게 합니다
+	dependency not given:
+		패키지 '%s' 파일을 사용하여 패키지의 '%s', 하지만 종속성이 표시되지 않을 것입니다.
+		그것을 해결하려면 추가：
+		  에 의존： %s %s
+	
+	# Script stuff
+	has no member:				%s 맴버를 가지고 있지 않습니다 '%s'
+	can't convert:				변환할 수 없는　%s　에서　'%s'
+	has no member value:		값　"%s"　맴버가 아닌 '%s'
+	can't convert value:		변환할 수 없는　"%s"　에서　%s　으로 %s
+	unsupported format:			잘못된 형식： '%s'
+	in function:
+		%s
+		  함수 %s
+	in parameter:
+		매개 변수 %s: %s
+	in keyword reminder:
+		%s
+		  키워드로 텍스트를 생각나게 '%s'
+	
+	# Image stuff
+	coordinates for blending overlap:					오버랩을 혼합하기 위한 좌표
+	images used for blending must have the same size:	섞이기 위해 사용된 이미지는 같은 크기를 가져야 합니다
+	
+	# Error from files
+	no game specified:									게임에 지정된 %s
+	no stylesheet specified for the set:				세트를 위해 지정쇤 스타일 시트가 없습니다
+	stylesheet and set refer to different game:
+		스타일 시트 및 세트 같은 게임을 참조하지 않은 이것은 스타일 시트 파일의 에러〔오류〕입니다
+	unsupported field type:								지원되지 않는 필드 유형： '%s'
+	unsupported fill type:								지원되지 않는 필 유형： '%s'
+	unrecognized value:									인식되지 않는 값〔가격〕： '%s', defaulting to %s
+	expected key:										기대되는 키： '%s'
+	aborting parsing:									문서를 유산시키는 치명적인 오류
+	newer version:
+		%s
+		이 파일이 Magic Set Editor의 최신 버전에서 만들어진　(%s)　당신이 그것을 열고 파일의 일부 국면이 누락되었을 지도 몰랐을 때
+		당신은 최신 버전으로 업그레이트할 것을 권고합니다
+		http::를 방문하십시오　/　magicseteditor.sourceforge.net　/
+	word list type not found:			목록 유형이라는 단어　%s　(<word-list>태그에서)발견되지 않았다
+	pack type not found:				The pack type "%s" was not found (from a pack type)
+	
+	# Update checking
+	checking updates failed:			업데이트 확인에 실패했습니다.
+	no updates:							사용 가능한 업데이트가 없습니다.
+	
+	# Stats panel
+	dimension not found:				차원이 아닙니다 '%s'
+
+	# Random packs
+	pack type duplicate name:
+		There is already a pack type named '%s'.
+		Please choose a different name.
+	
+	# Package update window
+#	checking updates:					업데이트를 확인합니다.
+	can't download installer:
+			설치 패키지를 다운로드할 수 없습니다. %s 에서 %s.
+		무언가가 설치되어 있습니다.
+
+	downloading updates:				업데이트 다운로드 (%d of %d)
+	installing updates:					패키지 업데이트 (%d of %d)
+	
+	remove packages:
+		이것을 제거하고 %s 패키지를 계속하도록 하겠습니까?
+	remove packages modified:
+		이것을 제거하고 %s 패키지 %s 그것을 설치한 후에 변경되었습니다.
+		삭제 취소할 수 없습니다.
+	install packages successful:	%s 패키지가 성공적으로 설치되었습니다.
+	remove packages successful:		%s 패키지가 성공적으로 제거되었습니다.
+	change packages successful:		%s 패키지가 성공적으로 변경되었습니다.
+
+	cannot create file:			파일을 만들 수 없습니다. '%s', 을(를) 설치를 계속하겠습니까?
+
+############################################################## Types used in scripts / shape names
+type:
+	function:		기능
+	collection:		수집
+	collection of:	수집 %ss
+	object:			물건〔대상/목적〕
+	double:			실수
+	integer:		정수
+	string:			스트링〔문자열〕
+	boolean:		불린으로
+	color:			색깔
+	image:			이미지
+	date:			date
+	nil:			기타
+	
+	# Object types
+	package:		package
+	locale:			translation
+	game:			게임
+	set:			세트
+	stylesheet:		스타일 시트
+	export template:추출 템플릿
+	symbol:			symbol
+	card:			카드
+	cards:			카드
+	field:			필드
+	style:			스타일
+	value:			값
+	keyword:		키워드
+	keywords:		키워드
+	pack:			pack type
+	
+	# Symbol editor shapes
+	shape:			형태
+	shapes:			형태
+	circle:			원형
+	ellipse:		타원
+	square:			삼각형
+	rectangle:		직사각형
+	triangle:		삼각형
+	rhombus:		다이아몬드
+	pentagon:		오각형
+	hexagon:		육각형
+	polygon:		다각형
+	star:			별형
+	
+	rotation:		회전
+	reflection:		반사
+	group:			그룹
+	
+	point:			포인트
+	points:			포인트
+		
+
+############################################################## Magic
+package:
+	magic.mse-game:
+		# Card fields
+		name:		이름
+		cc:			마나・코스트
+		type:		카드 종류
+		p/t:		파워/터프니스
+		rarity:		레어리티
+		card name:	카드명
+		
+		# Set info
+		
+		# descriptions/help text
+		
+	magic-mana-*.mse-symbol-font:
+		# note: reminder/shortcut must start with a space, otherwise it is used as a shortcut
+		#       so typing T *anywhere* would insert a symbol (which would be bad)
+		menu item T:			탭・기호(&T)	 T
+		menu item Q:			&Untap symbol	 Q
+		menu item W:			하얀색 마나(&W)	 W
+		menu item U:			파랑색 마나(&U)	 U
+		menu item B:			검은색 마나(&B)	 B
+		menu item R:			빨간색 마나(&R)	 R
+		menu item G:			초록색 마나(&G)	 G
+		menu item S:			얼음색 마나(&S)	 S
+		menu item X:			불특정 마나 기호(&X)	 X
+		menu item Y:			불특정 마나 기호(&Y)	 Y
+		menu item Z:			불특정 마나 기호(&Z)	 Z
+		menu item I:			&Infinite mana	I
+		menu item colorless:	무색 마나(&C)...
+		title colorless:		무색 마나(&C)
+		message colorless:		임의의 수의 무색 마나
+		menu item half:				절반의 마나 기호(&H)
+		menu item |W:				하얀색 마나(&W)	 |W
+		menu item |U:				파랑색 마나(&U)	 |U
+		menu item |B:				검정색 마나(&B)	 |B
+		menu item |R:				빨강색 마나(&R)	 |R
+		menu item |G:				초록색 마나(&G)	 |G
+		menu item |S:				얼음색 마나(&S)	 |S
+		menu item 1/2:				무색 마나(&C)	1/2
+		menu item hybrid:		2색의 혼성 마나 기호(&Y)
+		menu item W/U:				하얀/파랑색 마나	 W/U
+		menu item U/B:				파랑/검정색 마나	 U/B
+		menu item B/R:				검정/빨강색 마나	 B/R
+		menu item R/G:				빨강/초록색 마나	 R/G
+		menu item G/W:				초록/하얀색 마나	 G/W
+		menu item W/B:				하얀/검정색 마나	 W/B
+		menu item U/R:				초록/빨강색 마나	 U/R
+		menu item B/G:				검정/초록색 마나	 B/G
+		menu item R/W:				빨강/하얀색 마나	 R/W
+		menu item G/U:				초록/파랑색 마나	 G/U
+		menu item hybrid 3:		3색의 혼성 마나 기호(&Y)
+		menu item W/U/B:			하얀/파랑/검정색 마나	 W/U/B
+		menu item U/B/R:			파랑/검정/빨강색 마나	 U/B/R
+		menu item B/R/G:			검정/빨강/초록색 마나	 B/R/G
+		menu item R/G/W:			빨강/초록/하얀색 마나	 R/G/W
+		menu item G/W/U:			초록/하얀/파랑색 마나	 G/W/U
+		menu item W/B/R:			하얀/검정/빨강색 마나	 W/B/R
+		menu item U/R/G:			파랑/빨강/초록색 마나	 U/R/G
+		menu item B/G/W:			검정/초록/하얀색 마나	 B/G/W
+		menu item R/W/U:			빨강/하얀/파랑색 마나	 R/W/U
+		menu item G/U/B:			초록/파랑/검정색 마나	 G/U/B
+
