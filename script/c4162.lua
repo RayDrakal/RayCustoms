@@ -1,0 +1,82 @@
+--ガガガ×ガガガ
+function c4162.initial_effect(c)
+	--Activate
+	local e1=Effect.CreateEffect(c)
+	e1:SetCategory(CATEGORY_SPECIAL_SUMMON)
+	e1:SetType(EFFECT_TYPE_ACTIVATE)
+	e1:SetCode(EVENT_FREE_CHAIN)
+	e1:SetProperty(EFFECT_FLAG_CARD_TARGET)
+	e1:SetTarget(c4162.target)
+	e1:SetOperation(c4162.activate)
+	c:RegisterEffect(e1)
+	--Destroy
+	local e2=Effect.CreateEffect(c)
+	e2:SetType(EFFECT_TYPE_CONTINUOUS+EFFECT_TYPE_FIELD)
+	e2:SetRange(LOCATION_MZONE)
+	e2:SetCode(EVENT_LEAVE_FIELD)
+	e2:SetCondition(c4162.descon)
+	e2:SetOperation(c4162.desop)
+	c:RegisterEffect(e2)
+end
+function c4162.gafilter(c)
+	return c:IsFaceup() and c:IsSetCard(0x54)
+end
+function c4162.target(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then
+		return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
+			and Duel.IsPlayerCanSpecialSummonMonster(tp,4162,0x10db,0x11,nil,nil,nil,nil,nil)
+			and Duel.IsExistingTarget(c4162.gafilter,tp,LOCATION_MZONE,0,1,nil) end
+	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,e:GetHandler(),1,0,0)
+	Duel.SelectTarget(tp,c4162.gafilter,tp,LOCATION_MZONE,0,1,1,nil)
+end
+function c4162.activate(e,tp,eg,ep,ev,re,r,rp)
+	if Duel.GetLocationCount(tp,LOCATION_MZONE)<=0 then return end
+	local tc=Duel.GetFirstTarget()
+	local c=e:GetHandler()
+	if c:IsRelateToEffect(e) and Duel.IsPlayerCanSpecialSummonMonster(tp,tc:GetCode(),0x10db,0x11,tc:GetLevel(),tc:GetAttack(),tc:GetDefense(),tc:GetRace(),tc:GetAttribute()) then
+		c:AddMonsterAttribute(TYPE_NORMAL)
+		Duel.SpecialSummonStep(c,0,tp,tp,true,false,POS_FACEUP)
+		local e1=Effect.CreateEffect(c)
+		e1:SetType(EFFECT_TYPE_SINGLE)
+		e1:SetCode(EFFECT_CHANGE_TYPE)
+		e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
+		e1:SetValue(TYPE_NORMAL+TYPE_MONSTER)
+		e1:SetReset(RESET_EVENT+0x47c0000)
+		c:RegisterEffect(e1,true)
+		local e2=e1:Clone()
+		e2:SetCode(EFFECT_CHANGE_CODE)
+		e2:SetValue(tc:GetCode())
+		c:RegisterEffect(e2,true)
+		local e3=e1:Clone()
+		e3:SetCode(EFFECT_CHANGE_ATTRIBUTE)
+		e3:SetValue(tc:GetAttribute())
+		c:RegisterEffect(e3,true)
+		local e4=e1:Clone()
+		e4:SetCode(EFFECT_SET_BASE_ATTACK)
+		e4:SetValue(tc:GetAttack())
+		c:RegisterEffect(e4,true)
+		local e5=e1:Clone()
+		e5:SetCode(EFFECT_SET_BASE_DEFENSE)
+		e5:SetValue(tc:GetDefense())
+		c:RegisterEffect(e5,true)
+		local e6=e1:Clone()
+		e6:SetCode(EFFECT_CHANGE_LEVEL)
+		e6:SetValue(tc:GetLevel())
+		c:RegisterEffect(e6,true)
+		c:AddMonsterAttributeComplete()
+		local e7=e1:Clone()
+		e7:SetCode(EFFECT_CHANGE_RACE)
+		e7:SetValue(tc:GetRace())
+		c:RegisterEffect(e7,true)
+		c:AddMonsterAttributeComplete()
+		Duel.SpecialSummonComplete()
+		c:SetCardTarget(tc)
+	end
+end
+function c4162.descon(e,tp,eg,ep,ev,re,r,rp)
+	local tc=e:GetHandler():GetFirstCardTarget()
+	return tc and eg:IsContains(tc)
+end
+function c4162.desop(e,tp,eg,ep,ev,re,r,rp)
+	Duel.Destroy(e:GetHandler(),REASON_EFFECT)
+end
