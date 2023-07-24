@@ -30,7 +30,7 @@ function s.mfilter(c)
 	return c:IsSummonType(SUMMON_TYPE_SPECIAL) and c:IsSummonLocation(LOCATION_EXTRA)
 end
 function s.rmcfilter(c)
-	return c:IsSpell() and c:IsAbleToRemoveAsCost()
+	return c:IsAbleToRemoveAsCost()
 end
 function s.desct(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.rmcfilter,tp,LOCATION_GRAVE,0,1,nil) end
