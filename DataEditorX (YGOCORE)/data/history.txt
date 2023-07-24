@@ -1,12 +1,13 @@
 # database history
-C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\release-dune.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
+C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
 C:\ProjectIgnis\repositories\languages\한국어\release-dune.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
 C:\ProjectIgnis\repositories\languages\한국어\prerelease-agov.cdb
 C:\ProjectIgnis\expansions\cards.cdb
 # script history
+C:\Users\User\Desktop\CDB_Make\custom-rd\script\c110742500.lua
 C:\Users\User\Desktop\CDB_Make\custom-rd\script\c110742100.lua
 C:\Users\User\Desktop\CDB_Make\EDO file\script\c38264974.lua
 C:\Users\User\Desktop\CDB_Make\custom-rd\script\c110742545.lua
@@ -22,4 +23,3 @@ C:\Users\User\Desktop\CDB_Make\EDO file\script\c2368215.lua
 C:\Users\User\Desktop\CDB_Make\EDO file\script\c42444868.lua
 C:\Users\User\Desktop\CDB_Make\EDO file\script\c74577599.lua
 C:\Users\User\Desktop\CDB_Make\EDO file\script\c15989522.lua
-C:\Users\User\Desktop\CDB_Make\EDO file\script\c41443249.lua
