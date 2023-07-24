@@ -1,4 +1,6 @@
 --환상신수 갓 키메라
+--
+--
 local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
@@ -12,13 +14,13 @@ function s.initial_effect(c)
 	e1:SetRange(LOCATION_MZONE|LOCATION_GRAVE)
 	e1:SetValue(CARD_CHIMERA_MYTHICAL_BEAST)
 	c:RegisterEffect(e1)
-    --Register multiple attacks effect
+	--Register multiple attacks effect
 	local e2=Effect.CreateEffect(c)
 	e2:SetType(EFFECT_TYPE_SINGLE)
 	e2:SetCode(EFFECT_MATERIAL_CHECK)
 	e2:SetValue(s.matcheck)
 	c:RegisterEffect(e2)
-    --Neither monster can be destroyed by battle
+	--Neither monster can be destroyed by battle
 	local e3=Effect.CreateEffect(c)
 	e3:SetType(EFFECT_TYPE_FIELD)
 	e3:SetCode(EFFECT_INDESTRUCTABLE_BATTLE)
@@ -27,22 +29,22 @@ function s.initial_effect(c)
 	e3:SetTarget(s.indestg)
 	e3:SetValue(1)
 	c:RegisterEffect(e3)
-    --Double Battle Damage
+	--Double Battle Damage
 	local e4=Effect.CreateEffect(c)
 	e4:SetType(EFFECT_TYPE_SINGLE)
 	e4:SetCode(EFFECT_CHANGE_BATTLE_DAMAGE)
 	e4:SetValue(aux.ChangeBattleDamage(1,DOUBLE_DAMAGE))
 	c:RegisterEffect(e4)
-    --Special summon 1 illusion monster during the next Standby Phase
-	local e2=Effect.CreateEffect(c)
-	e2:SetDescription(aux.Stringid(id,1))
-	e2:SetCategory(CATEGORY_SPECIAL_SUMMON)
-	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
-	e2:SetProperty(EFFECT_FLAG_DELAY+EFFECT_FLAG_DAMAGE_STEP+EFFECT_FLAG_DAMAGE_CAL)
-	e2:SetCode(EVENT_LEAVE_FIELD)
-	e3:SetTarget(s.sptg)
-	e3:SetOperation(s.spop)
-	c:RegisterEffect(e2)
+	--Special summon 1 illusion monster during the next Standby Phase
+	local e5=Effect.CreateEffect(c)
+	e5:SetDescription(aux.Stringid(id,1))
+	e5:SetCategory(CATEGORY_SPECIAL_SUMMON)
+	e5:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e5:SetProperty(EFFECT_FLAG_DELAY+EFFECT_FLAG_DAMAGE_STEP+EFFECT_FLAG_DAMAGE_CAL)
+	e5:SetCode(EVENT_LEAVE_FIELD)
+	e5:SetTarget(s.sptg)
+	e5:SetOperation(s.spop)
+	c:RegisterEffect(e5)
 end
 s.listed_names={CARD_CHIMERA_MYTHICAL_BEAST}
 function s.matcheck(e,c)
