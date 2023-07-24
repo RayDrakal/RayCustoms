@@ -1,10 +1,19 @@
 # database history
-C:\Users\joonh\Desktop\새 폴더\RayCustoms\customs.cdb
+C:\Users\joonh\Desktop\Master\Ver-Sanso\sansoorica.cdb
+C:\Users\joonh\Desktop\RayCustoms\customs.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\cards-unofficial.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\prerelease-agov.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\cards.cdb
+C:\Users\joonh\Desktop\RayCustoms\maru.cdb
 C:\ProjectIgnis\repositories\languages\한국어\prerelease-agov.cdb
 C:\ProjectIgnis\expansions\cards.cdb
 C:\ProjectIgnis\repositories\languages\한국어\release-dune.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
 # script history
+C:\Users\joonh\Desktop\RayCustoms\script\c4350.lua
+C:\Users\joonh\Desktop\Master\Ver-Edo\script\c511600371.lua
+C:\Users\joonh\Desktop\Master\Ver-Edo\script\c511001727.lua
+C:\Users\joonh\Desktop\Master\Ver-Edo\script\c2511.lua
 C:\ProjectIgnis\script\official\c14357527.lua
 C:\ProjectIgnis\repositories\delta-puppet\script\official\c31241087.lua
 C:\ProjectIgnis\script\official\c69351984.lua
@@ -17,6 +26,3 @@ C:\ProjectIgnis\script\official\c76774528.lua
 C:\ProjectIgnis\script\official\c57031794.lua
 C:\ProjectIgnis\script\official\c90448279.lua
 C:\ProjectIgnis\script\official\c93966624.lua
-C:\ProjectIgnis\script\official\c54082269.lua
-C:\ProjectIgnis\script\official\c80993256.lua
-C:\ProjectIgnis\script\official\c8310162.lua

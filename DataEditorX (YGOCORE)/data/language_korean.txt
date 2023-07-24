@@ -13,7 +13,7 @@ CodeEditForm.mainMenu.menuitem_setcard	DataBase 세트
 CodeEditForm.mainMenu.menuitem_help	도움말(&H)
 CodeEditForm.mainMenu.menuitem_about	정보
 #
-DataEditForm.btn_img	이미지 삽입
+DataEditForm.pl_bottom.btn_img	이미지 삽입
 DataEditForm.lb_types	카드 종류
 DataEditForm.lb_markers	링크 마커
 DataEditForm.lb_tiptexts	Script 텍스트
@@ -22,15 +22,15 @@ DataEditForm.lb_cardcode	코드
 DataEditForm.lb_cardalias	같은 코드
 DataEditForm.lb_atkdef	ATK/DEF
 DataEditForm.lb_pleft_right	P스케일
-DataEditForm.btn_reset	리셋
-DataEditForm.btn_lua	Script
-DataEditForm.btn_serach	검색
-DataEditForm.btn_del	삭제
-DataEditForm.btn_undo	되돌리기
-DataEditForm.btn_mod	수정
-DataEditForm.btn_add	추가
-DataEditForm.btn_PageDown	다음
-DataEditForm.btn_PageUp	이전
+DataEditForm.pl_bottom.btn_reset	리셋
+DataEditForm.pl_bottom.btn_lua	Script
+DataEditForm.pl_bottom.btn_serach	검색
+DataEditForm.pl_bottom.btn_del	삭제
+DataEditForm.pl_bottom.btn_undo	되돌리기
+DataEditForm.pl_bottom.btn_mod	수정
+DataEditForm.pl_bottom.btn_add	추가
+DataEditForm.pl_bottom.btn_PageDown	다음
+DataEditForm.pl_bottom.btn_PageUp	이전
 DataEditForm.lv_cardlist.0	카드 코드
 DataEditForm.lv_cardlist.1	카드 이름
 DataEditForm.mainMenu.menuitem_file	파일(&F)
