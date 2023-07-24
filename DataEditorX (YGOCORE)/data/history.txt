@@ -1,8 +1,11 @@
 # database history
-C:\Users\joonh\Desktop\Master\Ver-Sanso\sansoorica.cdb
 C:\Users\joonh\Desktop\RayCustoms\customs.cdb
-C:\Users\joonh\Desktop\Master\Ver-Edo\cards-unofficial.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\release-dp28.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\release-ac03.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\release-dune.cdb
 C:\Users\joonh\Desktop\Master\Ver-Edo\prerelease-agov.cdb
+C:\Users\joonh\Desktop\Master\Ver-Sanso\sansoorica.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\cards-unofficial.cdb
 C:\Users\joonh\Desktop\Master\Ver-Edo\cards.cdb
 C:\Users\joonh\Desktop\RayCustoms\maru.cdb
 C:\ProjectIgnis\repositories\languages\한국어\prerelease-agov.cdb

@@ -5,7 +5,7 @@ auto replace:
 	replace: ©
 auto replace:
 	match: JPCP
-	replace: ©高橋和希 スタジオ・ダイス/集英社
+	replace: ©Presented By Ray Drakal
 auto replace:
 	match: /1
 	replace: ①
@@ -21,6 +21,12 @@ auto replace:
 auto replace:
 	match: /5
 	replace: ⑤
+auto replace:
+	match: /6
+	replace: ⑥
+auto replace:
+	match: /7
+	replace: ⑦
 auto replace:
 	match: CR
 	replace: ©
