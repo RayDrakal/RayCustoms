@@ -21,6 +21,9 @@ function s.initial_effect(c)
 	e2:SetRange(LOCATION_MZONE)
 	e2:SetValue(s.chnlv)
 	c:RegisterEffect(e2)
+	local e3=e2:Clone()
+	e3:SetCode(EFFECT_XYZ_LEVEL)
+	c:RegisterEffect(e3)
 	--activity check
 	Duel.AddCustomActivityCounter(id,ACTIVITY_CHAIN,function(re) return not re:GetHandler():IsCode(CARD_SUPERIOR_ARGOS) end)
 end

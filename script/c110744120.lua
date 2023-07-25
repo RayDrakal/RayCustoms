@@ -20,6 +20,9 @@ function s.initial_effect(c)
 	e2:SetRange(LOCATION_MZONE)
 	e2:SetValue(s.chnlv)
 	c:RegisterEffect(e2)
+	local e3=e2:Clone()
+	e3:SetCode(EFFECT_XYZ_LEVEL)
+	c:RegisterEffect(e3)
 end
 s.listed_names={CARD_SUPERIOR_ARGOS}
 function s.spcon(e,tp,eg,ep,ev,re,r,rp)
