@@ -4,7 +4,7 @@ auto replace:
 	match: CR
 	replace: ©
 auto replace:
-	match: JPCP
+	match: RDCP
 	replace: ©Presented By Ray Drakal
 auto replace:
 	match: /1
@@ -21,12 +21,6 @@ auto replace:
 auto replace:
 	match: /5
 	replace: ⑤
-auto replace:
-	match: /6
-	replace: ⑥
-auto replace:
-	match: /7
-	replace: ⑦
 auto replace:
 	match: CR
 	replace: ©
