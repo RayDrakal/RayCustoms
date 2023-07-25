@@ -47,10 +47,10 @@ function s.rmop(e,tp,eg,ep,ev,re,r,rp)
         c:RegisterEffect(e1)
 	end
 end
-function s.chnlv(e,c,rc)
-	if rc:IsRace(RACE_CREATORGOD) then
-		return 5,e:GetHandler():GetLevel()
+function s.chnlv(e,c)
+	local lv=e:GetHandler():GetLevel()
+	if c:IsRace(RACE_CREATORGOD) then return lv+3
 	else
-		return e:GetHandler():GetLevel()
+		return lv
 	end
 end
