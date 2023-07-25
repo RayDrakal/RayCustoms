@@ -22,14 +22,12 @@ function s.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 s.listed_names={CARD_SUPERIOR_ARGOS}
-function s.filter(c)
-	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS)
-end
-function s.spcon(e,c)
-	if c==nil then return true end
-	local tp=c:GetControler()
-	return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
-		and Duel.IsExistingMatchingCard(s.filter,tp,0,LOCATION_MZONE,1,nil)
+function s.spcon(e,tp,eg,ep,ev,re,r,rp)
+	local g=Duel.GetFieldGroup(tp,LOCATION_MZONE,0)
+	return Duel.GetTurnPlayer()==1-tp 
+    and (#g==0 
+        or (#g>0 and g:FilterCount((aux.FaceupFilter(Card.IsSetCard,SET_ARGEARS) 
+            or aux.FaceupFilter(Card.IsCode,CARD_SUPERIOR_ARGOS)),nil)==#g))
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
