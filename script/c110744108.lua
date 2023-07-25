@@ -27,7 +27,7 @@ function s.spcon(e,tp,eg,ep,ev,re,r,rp)
 	local g=Duel.GetFieldGroup(tp,LOCATION_MZONE,0)
 	return Duel.GetTurnPlayer()==1-tp 
     and (#g==0 
-        or (#g>0 and g:FilterCount((aux.FaceupFilter(Card.IsRace,RACE_PLANT) 
+        or (#g>0 and g:FilterCount((aux.FaceupFilter(Card.IsSetCard,SET_ARGEARS) 
             or aux.FaceupFilter(Card.IsCode,CARD_SUPERIOR_ARGOS)),nil)==#g))
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
