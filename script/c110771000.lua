@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
 	--Fusion procedure
-	Fusion.AddProcMixRep(c,true,true,CARD_SUPERIOR_ARGOS,aux.FilterBoolFunctionEx(Card.IsAttackAbove,2400))
+	Fusion.AddProcMix(c,true,true,CARD_SUPERIOR_ARGOS,s.ffilter)
 	--Name is treated as "Superior Argos"
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_SINGLE)
@@ -53,6 +53,9 @@ function s.initial_effect(c)
 end
 s.material={CARD_SUPERIOR_ARGOS}
 s.listed_names={CARD_SUPERIOR_ARGOS}
+function s.ffilter(c,fc,sumtype,tp)
+	return c:IsAttackAbove(2400,fc,sumtype,tp)
+end
 function s.setcon(e,tp,eg,ep,ev,re,r,rp)
 	return e:GetHandler():IsSummonType(SUMMON_TYPE_FUSION) and e:GetLabel()==1
 end
