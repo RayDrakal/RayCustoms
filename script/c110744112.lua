@@ -49,10 +49,18 @@ function s.spop(e,tp,eg,ep,ev,re,r,rp)
         c:RegisterEffect(e1)
 	end
 end
-function s.chnlv(e,c)
+function s.chnslv(e,c)
 	local lv=e:GetHandler():GetLevel()
-	if c:IsRace(RACE_CREATORGOD) then return lv+3
+	if c:IsRace(RACE_CREATORGOD) then
+		return 5*65536+lv
 	else
 		return lv
+	end
+end
+function s.chnxlv(e,c,rc)
+	if rc:IsRace(RACE_CREATORGOD) then
+		return 5,e:GetHandler():GetLevel()
+	else
+		return e:GetHandler():GetLevel()
 	end
 end
