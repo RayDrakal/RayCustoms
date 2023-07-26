@@ -11,15 +11,15 @@ function s.initial_effect(c)
 	e1:SetCondition(s.spcon)
 	c:RegisterEffect(e1)
     --Fusion Summon
-	local fparam={nil,nil}
+	local fparam={nil}
 	local e2=Effect.CreateEffect(c)
 	e2:SetDescription(aux.Stringid(id,1))
 	e1:SetCategory(CATEGORY_SPECIAL_SUMMON+CATEGORY_FUSION_SUMMON)
 	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
 	e2:SetProperty(EFFECT_FLAG_DELAY)
 	e2:SetCode(EVENT_SUMMON_SUCCESS)
-	e2:SetTarget(Fusion.SummonEffTG(fparam))
-	e2:SetOperation(Fusion.SummonEffTG(fparam))
+	e2:SetTarget(Fusion.SummonEffTG(table.unpack(params)))
+	e2:SetOperation(Fusion.SummonEffTG(table.unpack(params)))
 	c:RegisterEffect(e2)
 	local e3=e2:Clone()
 	e3:SetCode(EVENT_SPSUMMON_SUCCESS)
