@@ -11,7 +11,7 @@ function s.initial_effect(c)
 	e1:SetCondition(s.spcon)
 	c:RegisterEffect(e1)
     --Fusion Summon
-	local fparam={nil,nil}
+	local params = {nil,nil,function(e,tp,mg) return nil,s.fcheck end}
 	local e2=Effect.CreateEffect(c)
 	e2:SetDescription(aux.Stringid(id,1))
 	e1:SetCategory(CATEGORY_SPECIAL_SUMMON+CATEGORY_FUSION_SUMMON)
@@ -19,8 +19,8 @@ function s.initial_effect(c)
 	e2:SetProperty(EFFECT_FLAG_DELAY)
 	e2:SetCode(EVENT_SUMMON_SUCCESS)
 	e2:SetCountLimit(1,{id,1})
-	e2:SetTarget(Fusion.SummonEffTG(nil,nil,nil,nil,Fusion.ForcedHandler))
-	e2:SetOperation(Fusion.SummonEffTG(nil,nil,nil,nil,Fusion.ForcedHandler))
+	e2:SetTarget(Fusion.SummonEffTG(table.unpack(params)))
+	e2:SetOperation(Fusion.SummonEffOP(table.unpack(params)))
 	c:RegisterEffect(e2)
 	local e3=e2:Clone()
 	e3:SetCode(EVENT_SPSUMMON_SUCCESS)
@@ -37,6 +37,9 @@ function s.initial_effect(c)
 	c:RegisterEffect(e4)
 end
 s.listed_names={CARD_SUPERIOR_ARGOS}
+function s.fcheck(tp,sg,fc)
+	return sg:IsExists(Card.IsCode,1,nil,CARD_SUPERIOR_ARGOS)
+end
 function s.cfilter(c)
 	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS)
 end

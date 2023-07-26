@@ -1,6 +1,6 @@
 # database history
-C:\Users\joonh\Desktop\RayCustoms\customs.cdb
 C:\Users\joonh\Desktop\Master\Ver-Edo\cards.cdb
+C:\Users\joonh\Desktop\RayCustoms\customs.cdb
 C:\Users\joonh\Desktop\Master\Ver-Edo\release-dune.cdb
 C:\ProjectIgnis\repositories\languages\한국어\release-dune.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
