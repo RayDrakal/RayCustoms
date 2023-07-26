@@ -16,13 +16,17 @@ function s.initial_effect(c)
 	--Can be treated as Level 5
 	local e2=Effect.CreateEffect(c)
 	e2:SetType(EFFECT_TYPE_SINGLE)
-	e2:SetCode(EFFECT_SYNCHRO_LEVEL|EFFECT_XYZ_LEVEL)
+	e2:SetCode(EFFECT_SYNCHRO_LEVEL)
 	e2:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
-	e2:SetRange(LOCATION_MZONE)
-	e2:SetValue(s.chnlv)
+	e2:SetRange(LOCATION_ONFIELD)
+	e2:SetValue(s.chnslv)
 	c:RegisterEffect(e2)
-	local e3=e2:Clone()
+	local e3=Effect.CreateEffect(c)
+	e3:SetType(EFFECT_TYPE_SINGLE)
 	e3:SetCode(EFFECT_XYZ_LEVEL)
+	e3:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e3:SetRange(LOCATION_ONFIELD)
+	e3:SetValue(s.chnxlv)
 	c:RegisterEffect(e3)
 end
 s.listed_names={CARD_SUPERIOR_ARGOS}
@@ -48,10 +52,18 @@ function s.spop(e,tp,eg,ep,ev,re,r,rp)
         c:RegisterEffect(e1)
 	end
 end
-function s.chnlv(e,c)
+function s.chnslv(e,c)
 	local lv=e:GetHandler():GetLevel()
-	if c:IsRace(RACE_CREATORGOD) then return lv+3
+	if c:IsRace(RACE_CREATORGOD) then
+		return 5*65536+lv
 	else
 		return lv
+	end
+end
+function s.chnxlv(e,c,rc)
+	if rc:IsRace(RACE_CREATORGOD) then
+		return 5,e:GetHandler():GetLevel()
+	else
+		return e:GetHandler():GetLevel()
 	end
 end
