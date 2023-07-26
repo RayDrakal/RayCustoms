@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
 	--Fusion procedure
-	Fusion.AddProcMix(c,true,true,CARD_SUPERIOR_ARGOS,s.ffilter)
+	Fusion.AddProcMixRep(c,true,true,aux.FilterBoolFunctionEx(Card.IsAttackAbove,2400),1,1,CARD_SUPERIOR_ARGOS)
 	--Name is treated as "Superior Argos"
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_SINGLE)
