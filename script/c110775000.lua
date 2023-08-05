@@ -81,7 +81,7 @@ function s.xop(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function s.cfilter(c,tp)
-	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS) and c:IsControler(tp)
+	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS) and c:IsControler(tp) and not c:IsCode(110775000)
 end
 function s.ovcon(e,tp,eg,ep,ev,re,r,rp)
 	return eg:IsExists(s.cfilter,1,nil,tp)
