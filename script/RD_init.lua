@@ -1,3 +1,6 @@
+-- races
+RACE_MYSTICS            =0x2000000000
+
 -- archetype
 SET_ARGEARS             = 0x423
 SET_ZEROTH              = 0x424
@@ -6,4 +9,5 @@ SET_ZEROTH              = 0x424
 
 -- card
 CARD_SUPERIOR_ARGOS     = 110744444
+
 -- 
