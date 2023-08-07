@@ -84,7 +84,7 @@ function s.cfilter(c,tp)
 	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS) and c:IsControler(tp) and not c:IsCode(110775000)
 end
 function s.ovcon(e,tp,eg,ep,ev,re,r,rp)
-	return eg:IsExists(s.cfilter,1,nil,tp)
+	return eg:IsExists(s.cfilter,1,e:GetHandler())
 end
 function s.ovcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()

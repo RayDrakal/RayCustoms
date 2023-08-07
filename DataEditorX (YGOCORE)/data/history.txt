@@ -1,6 +1,6 @@
 # database history
-C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
 C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
+C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\release-agov.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
 C:\ProjectIgnis\expansions\cards.cdb
