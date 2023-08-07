@@ -25,7 +25,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e2)
 	--Add xyz material
 	local e3=Effect.CreateEffect(c)
-	e3:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+	e3:SetType(EFFECT_TYPE_TRIGGER_O)
 	e3:SetCode(EVENT_SUMMON_SUCCESS)
 	e3:SetProperty(EFFECT_FLAG_DELAY)
 	e3:SetRange(LOCATION_MZONE)
@@ -80,11 +80,11 @@ function s.xop(e,tp,eg,ep,ev,re,r,rp)
 		end
 	end
 end
-function s.cfilter(c)
+function s.ofilter(c)
 	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS)
 end
 function s.ovcon(e,tp,eg,ep,ev,re,r,rp)
-	return eg:IsExists(s.cfilter,1,tp)
+	return eg:IsExists(s.ofilter,1,e:GetHandler())
 end
 function s.ovcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
