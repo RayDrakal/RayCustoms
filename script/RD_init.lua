@@ -1,5 +1,8 @@
 -- races
--- RACE_MYSTICS            =0x2000000000
+RACE_MYSTICS            =0x100000000
+RACE_OVERLORD           =0x200000000
+RACE_XERO               =0x400000000
+--
 
 -- archetype
 SET_ARGEARS             = 0x423

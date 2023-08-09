@@ -80,11 +80,11 @@ function s.xop(e,tp,eg,ep,ev,re,r,rp)
 		end
 	end
 end
-function s.ofilter(c)
-	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS)
+function s.ofilter(c,tp)
+	return c:IsFaceup() and c:IsCode(CARD_SUPERIOR_ARGOS) and c:IsControler(tp)
 end
 function s.ovcon(e,tp,eg,ep,ev,re,r,rp)
-	return eg:IsExists(s.ofilter,1,e:GetHandler())
+	return eg:IsExists(s.ofilter,1,nil,tp)
 end
 function s.ovcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
