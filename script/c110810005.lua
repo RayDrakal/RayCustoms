@@ -55,7 +55,7 @@ function s.activate(e,tp,eg,ep,ev,re,r,rp)
 		Duel.ConfirmCards(1-tp,sg)
 	end
 end
-function s.etarget(e,c)
+function s.etarget(c)
 	return c:IsCode(CARD_YOUTH_BERK) or (c:ListsCode(CARD_YOUTH_BERK) and c:IsType(TYPE_MONSTER))
 end
 function s.atkfilter(c)

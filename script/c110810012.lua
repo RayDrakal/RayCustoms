@@ -32,7 +32,7 @@ function s.initial_effect(c)
 	
 end
 s.listed_names={CARD_YOUTH_BERK}
-function s.filter(e,c)
+function s.filter(c)
 	return c:IsCode(CARD_YOUTH_BERK) or (c:ListsCode(CARD_YOUTH_BERK) and c:IsType(TYPE_LINK))
 end
 function s.condition(e,tp,eg,ep,ev,re,r,rp)
@@ -77,7 +77,7 @@ function s.activate(e,tp,eg,ep,ev,re,r,rp)
 	end
 	Duel.SendtoDeck(dg,nil,2,REASON_EFFECT)
 end
-function s.filter2(e,c)
+function s.filter2(c)
 	return c:ListsCode(CARD_YOUTH_BERK) and c:IsType(TYPE_LINK)
 end
 function s.handcon(e)
