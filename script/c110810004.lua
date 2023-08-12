@@ -39,6 +39,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e4)
 	
 end
+s.listed_names={CARD_YOUTH_BERK}
 function s.splimit(e,se,sp,st)
 	return e:GetHandler():GetLocation()~=LOCATION_EXTRA
 end
