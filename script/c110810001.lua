@@ -36,10 +36,10 @@ function s.initial_effect(c)
 	
 end
 s.listed_names={CARD_YOUTH_BERK}
-function s.spcon(e,c,minc)
+function s.spcon(e,c)
 	if c==nil then return true end
 	local tp=c:GetControler()
-	return minc==0 and Duel.GetLocationCount(tp,LOCATION_MZONE)>0
+	return Duel.GetLocationCount(c:GetControler(),LOCATION_MZONE)>0
 		and (Duel.GetFieldGroupCount(tp,LOCATION_MZONE,0)==0 or Duel.IsExistingMatchingCard(aux.FaceupFilter(Card.IsAttackAbove,3000),tp,0,LOCATION_MZONE,1,nil))
 end
 function s.thtg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
