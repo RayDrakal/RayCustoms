@@ -41,7 +41,7 @@ function s.initial_effect(c)
 end
 s.listed_names={CARD_YOUTH_BERK}
 function s.splimit(e,se,sp,st)
-	return e:GetHandler():GetLocation()~=LOCATION_EXTRA
+	return (st&SUMMON_TYPE_FUSION)==SUMMON_TYPE_FUSION
 end
 function s.matfilter(c,tp)
 	return c:IsAbleToGraveAsCost() and (c:IsFaceup() or c:IsControler(tp))
