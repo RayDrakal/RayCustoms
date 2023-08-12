@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
 	--Fusion & Alt Procedure
-	Fusion.AddProcMixRep(c,true,true,nil,1,99,CARD_YOUTH_BERK)
+	Fusion.AddProcMixRep(c,true,true,aux.FilterBoolFunctionEx(Card.IsType,TYPE_MONSTER),1,99,CARD_YOUTH_BERK)
 	Fusion.AddContactProc(c,s.contactfil,s.contactop,s.splimit,nil,nil,nil,false)
 	-- Mill 5 cards from each Deck
 	local e1=Effect.CreateEffect(c)
