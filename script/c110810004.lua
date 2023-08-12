@@ -43,6 +43,9 @@ s.listed_names={CARD_YOUTH_BERK}
 function s.splimit(e,se,sp,st)
 	return e:GetHandler():GetLocation()~=LOCATION_EXTRA
 end
+function s.matfilter(c,tp)
+	return c:IsAbleToGraveAsCost() and (c:IsFaceup() or c:IsControler(tp))
+end
 function s.contactfil(tp)
 	return Duel.GetMatchingGroup(s.matfilter,tp,LOCATION_MZONE,LOCATION_MZONE,nil,tp)
 end
