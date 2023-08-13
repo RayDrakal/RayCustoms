@@ -1,7 +1,7 @@
 # database history
 C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\release-ac03.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
+C:\Users\User\Desktop\CDB_Make\EDO file\release-ac03.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-vjump-promos.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\release-agov.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-dbvs.cdb

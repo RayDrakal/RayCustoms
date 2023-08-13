@@ -18,4 +18,6 @@ SET_ZEROTH              = 0x424
 CARD_SUPERIOR_ARGOS     = 110744444
 CARD_YOUTH_BERK         = 110810001
 
--- 
+-- specific functions
+function Auxiliary.fuck1(e,tp)
+end
