@@ -44,11 +44,11 @@ function s.spcon(e,c)
 	return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
 		and Duel.IsExistingMatchingCard(s.spfilter,tp,LOCATION_MZONE,0,1,nil)
 end
-function s.sfilter(c)
+function s.xfilter(c)
 	return c:ListsCode(CARD_YOUTH_BERK)
 end
 function s.thfilter(c)
-	return c:IsAbleToHand() and (s.sfilter(c) or c:IsCode(CARD_YOUTH_BERK))
+	return c:IsAbleToHand() and (s.xfilter(c) or c:IsCode(CARD_YOUTH_BERK))
 end
 function s.thtg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.thfilter,tp,LOCATION_DECK,0,1,nil) end
@@ -56,7 +56,7 @@ function s.thtg(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 function s.rescon(sg,e,tp,mg)
 	return sg:FilterCount(Card.IsCode,nil,CARD_YOUTH_BERK)<=1
-		and sg:FilterCount(s.sfilter,nil)<=1
+		and sg:FilterCount(s.xfilter,nil)<=1
 end
 function s.thop(e,tp,eg,ep,ev,re,r,rp)
 	local g=Duel.GetMatchingGroup(s.thfilter,tp,LOCATION_DECK,0,nil)
