@@ -45,7 +45,7 @@ function s.spcon(e,c)
 		and Duel.IsExistingMatchingCard(s.spfilter,tp,LOCATION_MZONE,0,1,nil)
 end
 function s.xfilter(c)
-	return c:ListsCode(CARD_YOUTH_BERK)
+	return c:ListsCode(CARD_YOUTH_BERK) and not c:IsCode(CARD_YOUTH_BERK)
 end
 function s.thfilter(c)
 	return c:IsAbleToHand() and (s.xfilter(c) or c:IsCode(CARD_YOUTH_BERK))

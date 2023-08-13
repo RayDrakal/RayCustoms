@@ -1,10 +1,10 @@
 # database history
+C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
+C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-vjump-promos.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\release-agov.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-dbvs.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-phni.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
-C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-sr14.cdb
 C:\Users\User\Desktop\CDB_Make\EDO file\cards-rush.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
