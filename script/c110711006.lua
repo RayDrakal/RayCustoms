@@ -64,7 +64,7 @@ function s.xyzlv(e,c,rc)
 	end
 end
 function s.cfilter(c,tp)
-	return c:IsFaceup() and c:IsRcae(RACE_OVERLORD) and c:IsControler(tp)
+	return c:IsFaceup() and c:IsRace(RACE_OVERLORD) and c:IsControler(tp)
 end
 function s.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return not eg:IsContains(e:GetHandler()) and eg:IsExists(s.cfilter,1,nil,tp)
