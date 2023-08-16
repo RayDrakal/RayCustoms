@@ -46,7 +46,7 @@ function s.splimit(e,c,sump,sumtype,sumpos,targetp,se)
 	return c:IsCode(id) and (sumtype&SUMMON_TYPE_FUSION)==SUMMON_TYPE_FUSION
 end
 function s.tfcon(e,tp,eg,ep,ev,re,r,rp)
-	return e:GetHandler():IsSummonType(SUMMON_TYPE_SYNCHRO)
+	return e:GetHandler():IsSummonType(SUMMON_TYPE_FUSION)
 end
 function s.tffilter(c,tp)
 	return c:IsCode(CARD_FRACTAL_GAIUS) and not c:IsForbidden() and c:CheckUniqueOnField(tp)
