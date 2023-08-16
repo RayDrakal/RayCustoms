@@ -1,14 +1,6 @@
 # database history
-C:\Users\User\Desktop\CDB_Make\custom-rd\customs.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-dbvs.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-phni.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-sr14.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\prerelease-vjump-promos.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\release-agov.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\release-ac03.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\cards.cdb
-C:\Users\User\Desktop\CDB_Make\EDO file\cards-rush.cdb
+C:\Users\joonh\Desktop\Master\Ver-Edo\cards.cdb
+C:\Users\joonh\Desktop\RayCustoms\customs.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
 C:\ProjectIgnis\expansions\cards.cdb
 # script history
-C:\Users\User\Desktop\CDB_Make\custom-rd\script\c110742545.lua
