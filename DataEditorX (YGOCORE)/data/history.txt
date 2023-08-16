@@ -1,4 +1,5 @@
 # database history
+C:\Users\joonh\Desktop\Master\Ver-Edo\prerelease-phni.cdb
 C:\Users\joonh\Desktop\Master\Ver-Edo\cards.cdb
 C:\Users\joonh\Desktop\RayCustoms\customs.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
