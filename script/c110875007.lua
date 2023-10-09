@@ -4,7 +4,7 @@ function s.initial_effect(c)
 	c:EnableReviveLimit()
 	c:SetSPSummonOnce(id)
 	--xyz summon
-	Xyz.AddProcedure(c,nil,12,4,s.ovfilter,nil,99)
+	Xyz.AddProcedure(c,nil,12,4,s.ovfilter,aux.Stringid(id,0),99)
 	--Special Summon 1 "Kshatri-la" monster from the Deck
 	local e0=Effect.CreateEffect(c)
 	e0:SetDescription(aux.Stringid(id,0))
