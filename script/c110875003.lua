@@ -61,7 +61,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e8)
 	
 end
-s.counter_place_list={0x425}
+s.counter_place_list={0x1588}
 function s.chainfilter(re,tp,cid)
 	return not (re:IsActiveType(TYPE_MONSTER) and Duel.IsMainPhase())
 end
@@ -86,7 +86,7 @@ function s.acop(e,tp,eg,ep,ev,re,r,rp)
 	local p,loc=Duel.GetChainInfo(ev,CHAININFO_TRIGGERING_PLAYER,CHAININFO_TRIGGERING_LOCATION)
 	local c=e:GetHandler()
 	if loc==LOCATION_ONFIELD and c:GetFlagEffect(1)>0 then
-		re:GetHandler():AddCounter(0x425,1)
+		re:GetHandler():AddCounter(0x1588,1)
 	end
 end
 function s.addop2(e,tp,eg,ep,ev,re,r,rp)
