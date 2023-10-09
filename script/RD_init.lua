@@ -13,7 +13,7 @@ SET_DRAGONTREE          = 0X425
 SET_MASQUED             = 0x444
 
 -- counter
-COUNTER_DRAGONTREE      = 0x425
+COUNTER_DRAGONTREE      = 0x1588
 
 -- card
 CARD_FRACTAL_GAIUS      = 110711005

@@ -1,6 +1,7 @@
 --용수의 땅 - 그라이포비아
 local s,id=GetID()
 function s.initial_effect(c)
+	c:EnableCounterPermit(COUNTER_DRAGONTREE)
 	--Activate
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_ACTIVATE)
@@ -92,7 +93,7 @@ end
 function s.addop2(e,tp,eg,ep,ev,re,r,rp)
 	local count=0
 	for c in aux.Next(eg) do
-		if c:IsLocation(LOCATION_ONFIELD) then
+		if not c:IsCode(id) and c:IsLocation(LOCATION_ONFIELD) and c:IsReason(REASON_DESTROY) then
 			count=count+c:GetCounter(COUNTER_DRAGONTREE)
 		end
 	end
