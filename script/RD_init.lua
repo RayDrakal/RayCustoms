@@ -9,16 +9,18 @@ RACE_FANTSTAR           = 0x4000000000
 
 
 -- archetype
-SET_ARGEARS             = 0x423
-SET_ZEROTH              = 0x424
+SET_DRAGONTREE          = 0X425
+SET_MASQUED             = 0x444
 
 -- counter
-
+COUNTER_DRAGONTREE      = 0x425
 
 -- card
 CARD_FRACTAL_GAIUS      = 110711005
 CARD_SUPERIOR_ARGOS     = 110744444
 CARD_YOUTH_BERK         = 110810001
+CARD_GRIPHOBIA          = 110875003
+CARD_MASQUED            = 110877000
 
 -- specific functions
 function Auxiliary.fuck1(e,tp)
