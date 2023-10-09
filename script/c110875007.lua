@@ -69,7 +69,7 @@ function s.ovfilter(c,tp,xyzc)
 	return c:IsFaceup() and c:IsType(TYPE_XYZ,xyzc,SUMMON_TYPE_XYZ,tp) and c:IsSetCard(0x425,xyzc,SUMMON_TYPE_XYZ,tp)
 end
 function s.atkval(e,c)
-	return c:GetOverlayCount()*-200
+	return c:GetOverlayCount()*1000
 end
 function s.mttg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	local c=e:GetHandler()
