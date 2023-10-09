@@ -14,8 +14,9 @@ function s.initial_effect(c)
 	local e2=Effect.CreateEffect(c)
 	e2:SetDescription(aux.Stringid(id,1))
 	e2:SetCategory(CATEGORY_DECKDES)
-	e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_QUICK_O)
+	e2:SetType(EFFECT_TYPE_QUICK_O)
 	e2:SetCode(EVENT_FREE_CHAIN)
+	e2:SetLocation(LOCATION_MZONE)
 	e2:SetHintTiming(0,TIMINGS_CHECK_MONSTER+TIMING_MAIN_END)
 	e2:SetCountLimit(1,{id,1})
 	e2:SetCondition(s.mlcon)
@@ -26,7 +27,7 @@ function s.initial_effect(c)
 	
 end
 s.listed_series={SET_DRAGONTREE}
-function s.mlcon(e,tp,eg,ep,ev,re,r,rp)
+function s.mlcon()
 	return Duel.IsMainPhase()
 end
 function s.sumsuc(e,tp,eg,ep,ev,re,r,rp)
