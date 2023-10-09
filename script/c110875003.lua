@@ -63,6 +63,7 @@ function s.initial_effect(c)
 	
 end
 s.counter_place_list={0x1588}
+s.listed_series={SET_DRAGONTREE}
 function s.chainfilter(re,tp,cid)
 	return not (re:IsActiveType(TYPE_MONSTER) and Duel.IsMainPhase())
 end

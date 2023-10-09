@@ -19,6 +19,7 @@ function s.initial_effect(c)
 	
 end
 s.counter_place_list={0x1588}
+s.listed_series={SET_DRAGONTREE}
 function s.acop(e,tp,eg,ep,ev,re,r,rp)
 	if not e:GetHandler():IsRelateToEffect(e) then return end
 	local g=Duel.GetMatchingGroup(Card.IsFaceup,tp,LOCATION_MZONE,LOCATION_MZONE,nil)
