@@ -4,7 +4,7 @@ function s.initial_effect(c)
 	c:EnableReviveLimit()
 	c:SetSPSummonOnce(id)
 	--xyz summon
-	Xyz.AddProcedure(c,nil,12,4,s.ovfilter,aux.Stringid(id,0),99)
+	Xyz.AddProcedure(c,nil,12,4,s.ovfilter,nil,99)
 	--Special Summon 1 "Kshatri-la" monster from the Deck
 	local e0=Effect.CreateEffect(c)
 	e0:SetDescription(aux.Stringid(id,0))
@@ -22,7 +22,7 @@ function s.initial_effect(c)
 	e1:SetCode(EFFECT_UPDATE_ATTACK)
 	e1:SetRange(LOCATION_MZONE)
 	e1:SetTargetRange(0,LOCATION_MZONE)
-	e1:SetValue(function(_,_c) return (_c:GetOverlayCount())*-200 end)
+	e1:SetValue(s.atkval)
 	c:RegisterEffect(e1)
 	local e2=e1:Clone()
 	e2:SetCode(EFFECT_UPDATE_DEFENSE)
@@ -64,7 +64,7 @@ function s.initial_effect(c)
 	e8:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
 	e8:SetRange(LOCATION_MZONE)
 	e8:SetValue(s.efilter)
-	c:RegisterEffect(e1)
+	c:RegisterEffect(e8)
 	
 end
 s.listed_series={SET_DRAGONTREE}
@@ -72,7 +72,7 @@ function s.ovfilter(c,tp,xyzc)
 	return c:IsFaceup() and c:IsType(TYPE_XYZ,xyzc,SUMMON_TYPE_XYZ,tp) and c:IsSetCard(0x425,xyzc,SUMMON_TYPE_XYZ,tp)
 end
 function s.atkval(e,c)
-	return c:GetOverlayCount()*-200
+	return e:GetHandler():GetOverlayCount()*-200
 end
 function s.mttg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	local c=e:GetHandler()
