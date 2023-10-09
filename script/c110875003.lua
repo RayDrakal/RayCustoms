@@ -85,7 +85,7 @@ end
 function s.acop(e,tp,eg,ep,ev,re,r,rp)
 	local p,loc=Duel.GetChainInfo(ev,CHAININFO_TRIGGERING_PLAYER,CHAININFO_TRIGGERING_LOCATION)
 	local c=e:GetHandler()
-	if loc==LOCATION_ONFIELD and c:GetFlagEffect(1)>0 then
+	if re:IsActiveType(TYPE_MONSTER) and loc==LOCATION_MZONE and c:GetFlagEffect(1)>0 then
 		re:GetHandler():AddCounter(0x1588,1)
 	end
 end
