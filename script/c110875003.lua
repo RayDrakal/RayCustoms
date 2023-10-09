@@ -8,7 +8,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e1)
 	--counter
 	local e2=Effect.CreateEffect(c)
-	e2:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
+	e2:SetType(EFFECT_TYPE_CONTINUOUS+EFFECT_TYPE_FIELD)
 	e2:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
 	e2:SetCode(EVENT_CHAINING)
 	e2:SetRange(LOCATION_FZONE)
@@ -87,7 +87,7 @@ end
 function s.acop(e,tp,eg,ep,ev,re,r,rp)
 	local p,loc=Duel.GetChainInfo(ev,CHAININFO_TRIGGERING_PLAYER,CHAININFO_TRIGGERING_LOCATION)
 	local c=e:GetHandler()
-	if (re:IsActiveType(TYPE_MONSTER) or re:IsActiveType(TYPE_SPELL) or re:IsActiveType(TYPE_TRAP) )and re:GetHandler():GetCounter(0x425)>=0 and loc==LOCATION_ONFIELD and c:GetFlagEffect(1)>0 then
+	if loc==LOCATION_ONFIELD and c:GetFlagEffect(1)>0 then
 		re:GetHandler():AddCounter(0x425,1)
 	end
 end
