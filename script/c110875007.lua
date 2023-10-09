@@ -22,7 +22,7 @@ function s.initial_effect(c)
 	e1:SetCode(EFFECT_UPDATE_ATTACK)
 	e1:SetRange(LOCATION_MZONE)
 	e1:SetTargetRange(0,LOCATION_MZONE)
-	e1:SetValue(s.atkval)
+	e1:SetValue(function(_,_c) return (_c:GetOverlayCount())*-200 end)
 	c:RegisterEffect(e1)
 	local e2=e1:Clone()
 	e2:SetCode(EFFECT_UPDATE_DEFENSE)
@@ -57,11 +57,14 @@ function s.initial_effect(c)
     local e7=e4:Clone()
     e7:SetCode(EFFECT_CANNOT_BE_LINK_MATERIAL)
     c:RegisterEffect(e7)
-    --immuine effect
-    local e8=e4:Clone()
-    e8:SetCode(EFFECT_IMMUNE_EFFECT)
-    e8:SetValue(s.efilter)
-    c:RegisterEffect(e8)
+	--immune
+	local e8=Effect.CreateEffect(c)
+	e8:SetType(EFFECT_TYPE_SINGLE)
+	e8:SetCode(EFFECT_IMMUNE_EFFECT)
+	e8:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e8:SetRange(LOCATION_MZONE)
+	e8:SetValue(s.efilter)
+	c:RegisterEffect(e1)
 	
 end
 s.listed_series={SET_DRAGONTREE}
@@ -69,7 +72,7 @@ function s.ovfilter(c,tp,xyzc)
 	return c:IsFaceup() and c:IsType(TYPE_XYZ,xyzc,SUMMON_TYPE_XYZ,tp) and c:IsSetCard(0x425,xyzc,SUMMON_TYPE_XYZ,tp)
 end
 function s.atkval(e,c)
-	return c:GetOverlayCount()*1000
+	return c:GetOverlayCount()*-200
 end
 function s.mttg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	local c=e:GetHandler()
