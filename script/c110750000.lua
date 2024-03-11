@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
 	-- 5 Level 13 monsters, or 1 Rank 12 monster with 10+ Xyz materials
-	Xyz.AddProcedure(c,nil,7,2,s.ovfilter,aux.Stringid(id,0))
+	Xyz.AddProcedure(c,nil,13,5,s.ovfilter,aux.Stringid(id,0))
 	--immune
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_SINGLE)
