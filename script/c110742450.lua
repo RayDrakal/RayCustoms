@@ -61,11 +61,9 @@ function s.atkval(e,c)
 	local LOCATION_GRAVE_MZONE=LOCATION_GRAVE+LOCATION_MZONE
 	return Duel.GetMatchingGroupCount(aux.FaceupFilter(Card.IsAttribute,ATTRIBUTE_WATER),0,LOCATION_GRAVE_MZONE,LOCATION_GRAVE_MZONE,nil)*300
 end
-function s.filter(c)
-	return c:IsAttribute(ATTRIBUTE_WATER) and (c:IsLocation(LOCATION_GRAVE) or c:IsFaceup())
-end
-function s.cfilter(c)
-	return c:IsReason(REASON_BATTLE|REASON_EFFECT) and c:IsPreviousControler(tp) and c:IsPreviousLocation(LOCATION_ONFIELD)
+function s.cfilter(c,tp)
+	return c:IsReason(REASON_BATTLE|REASON_EFFECT) and c:IsOriginalAttribute(ATTRIBUTE_WATER) and c:IsPreviousControler(tp)
+		and (not c:IsPreviousLocation(LOCATION_ONFIELD) or (c:IsPreviousPosition(POS_FACEUP) and c:IsPreviousLocation(LOCATION_MZONE)))
 end
 function s.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return eg:IsExists(s.cfilter,1,nil,tp)
