@@ -57,14 +57,14 @@ function s.ovcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return c:GetFlagEffect(id)==0 and c:IsType(TYPE_XYZ) end
 	c:RegisterFlagEffect(id,RESET_CHAIN,0,1)
 end
-function s.ovfilter(c,xc,tp,e)
+function s.ovxfilter(c,xc,tp,e)
 	return c:IsCanBeXyzMaterial(xc,tp,REASON_EFFECT) and not c:IsImmuneToEffect(e)
 end
 function s.ovop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	if not c:IsRelateToEffect(e) then return end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_XMATERIAL)
-	local g=Duel.SelectMatchingCard(tp,s.ovfilter,tp,LOCATION_GRAVE|LOCATION_REMOVED,LOCATION_GRAVE|LOCATION_REMOVED,1,1,nil,c,tp,e)
+	local g=Duel.SelectMatchingCard(tp,s.ovxfilter,tp,LOCATION_GRAVE|LOCATION_REMOVED,LOCATION_GRAVE|LOCATION_REMOVED,1,1,nil,c,tp,e)
 	if #g>0 then
 		Duel.HintSelection(g,true)
 		Duel.Overlay(c,g)
