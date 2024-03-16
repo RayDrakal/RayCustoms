@@ -48,7 +48,7 @@ function s.initial_effect(c)
 	--negate or destroy
 	local e5=Effect.CreateEffect(c)
 	e5:SetDescription(aux.Stringid(id,0))
-	e5:SetCategory(CATEGORY_DISABLE+CATEGORY_REMOVE)
+	e5:SetCategory(CATEGORY_DISABLE+CATEGORY_DESTROY)
 	e5:SetType(EFFECT_TYPE_QUICK_O)
 	e5:SetCode(EVENT_CHAINING)
 	e5:SetRange(LOCATION_MZONE)

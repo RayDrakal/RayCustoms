@@ -1,6 +1,19 @@
 --청풍의 의지
 local s,id=GetID()
 function s.initial_effect(c)
+	-- Return 1 Water monster to the hand
+	local e1=Effect.CreateEffect(c)
+	e1:SetDescription(aux.Stringid(id,0))
+	e1:SetCategory(CATEGORY_TOHAND)
+	e1:SetType(EFFECT_TYPE_QUICK_O)
+	e1:SetProperty(EFFECT_FLAG_CARD_TARGET)
+	e1:SetCode(EVENT_FREE_CHAIN)
+	e1:SetRange(LOCATION_GRAVE)
+	e1:SetCountLimit(1,{id,1})
+	e1:SetHintTiming(0,TIMINGS_CHECK_MONSTER_E|TIMING_MAIN_END)
+	e1:SetTarget(s.thtg)
+	e1:SetOperation(s.thop)
+	c:RegisterEffect(e1)
 	-- Set itself from GY
 	local e2=Effect.CreateEffect(c)
 	e2:SetDescription(aux.Stringid(id,1))
@@ -36,5 +49,31 @@ function s.setop(e,tp,eg,ep,ev,re,r,rp)
         e1:SetCode(EFFECT_TRAP_ACT_IN_SET_TURN)
         e1:SetProperty(EFFECT_FLAG_SET_AVAILABLE)
 		c:RegisterEffect(e1)
+	end
+end
+function s.thfilter(c,tp,fnd_chk)
+	if not c:IsAbleToHand() then return false end
+	if c:IsControler(1-tp) then return fnd_chk end
+	return c:IsFaceup() and c:IsAttribute(ATTRIBUTE_WATER)
+end
+function s.thtg(e,tp,eg,ep,ev,re,r,rp,chk)
+	local fnd_chk=Duel.IsExistingMatchingCard(aux.FaceupFilter(Card.IsCode,CARD_MEGARANIKA),tp,LOCATION_ONFIELD,0,1,nil)
+	if chkc then return s.thfilter(chkc,tp,fnd_chk) end
+	if chk==0 then return Duel.IsExistingTarget(s.thfilter,tp,LOCATION_MZONE,LOCATION_ONFIELD,1,nil,tp,fnd_chk) end
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
+	local g=Duel.SelectTarget(tp,s.thfilter,tp,LOCATION_MZONE,LOCATION_ONFIELD,1,1,nil,tp,fnd_chk)
+	Duel.SetOperationInfo(0,CATEGORY_TOHAND,g,1,0,0)
+end
+function s.thop(e,tp,eg,ep,ev,re,r,rp)
+	local tc=Duel.GetFirstTarget()
+	if tc:IsRelateToEffect(e) and Duel.SendtoHand(tc,nil,REASON_EFFECT)>0 then
+		local dg=Duel.GetMatchingGroup(nil,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,nil)
+		if #dg>0 and Duel.SelectYesNo(tp,aux.Stringid(id,2)) then
+			Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_DESTROY)
+			dg=dg:Select(tp,1,1,nil)
+			Duel.HintSelection(dg,true)
+			Duel.BreakEffect()
+			Duel.Destroy(dg,REASON_EFFECT)
+		end
 	end
 end

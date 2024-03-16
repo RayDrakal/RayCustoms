@@ -16,7 +16,7 @@ function s.initial_effect(c)
 	e1:SetCode(EFFECT_INDESTRUCTABLE_EFFECT)
 	e1:SetRange(LOCATION_FZONE)
 	e1:SetCondition(s.indcon)
-	e1:SetValue(aux.indoval)
+	e1:SetValue(s.efilter)
 	c:RegisterEffect(e1)
 	--cannot disable summon
 	local e2=Effect.CreateEffect(c)
@@ -80,6 +80,9 @@ function s.activate(e,tp,eg,ep,ev,re,r,rp)
 		Duel.SendtoHand(sg,nil,REASON_EFFECT)
 		Duel.ConfirmCards(1-tp,sg)
 	end
+end
+function s.efilter(e,re)
+	return e:GetHandlerPlayer()~=re:GetOwnerPlayer()
 end
 function s.indfilter(c)
 	return c:IsFaceup() and c:IsAttribute(ATTRIBUTE_WATER) and c:IsType(TYPE_LINK)
