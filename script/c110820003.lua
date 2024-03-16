@@ -53,11 +53,8 @@ function s.desop(e,tp,eg,ep,ev,re,r,rp)
 		Duel.Destroy(g,REASON_EFFECT)
 	end
 end
-function s.cfilter(c)
-	return c:IsFaceup() and c:IsCode(CARD_MEGARANIKA)
-end
 function s.deccon(e,tp,eg,ep,ev,re,r,rp)
-	return Duel.IsExistingMatchingCard(s.cfilter,tp,LOCATION_ONFIELD,0,1,nil)
+	return Duel.IsExistingMatchingCard(aux.FaceupFilter(Card.IsCode,CARD_MEGARANIKA),0,LOCATION_ONFIELD,LOCATION_ONFIELD,1,nil)
 end
 function s.val(e,c)
 	return Duel.GetMatchingGroupCount(s.valfilter,0,LOCATION_ONFIELD,LOCATION_ONFIELD,nil)*-200
