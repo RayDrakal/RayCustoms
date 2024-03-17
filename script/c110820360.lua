@@ -34,7 +34,7 @@ function s.desfilter(c)
 end
 function s.condition(e,tp,eg,ep,ev,re,r,rp)
 	return rp==1-tp and Duel.IsExistingMatchingCard(s.cfilter,tp,LOCATION_ONFIELD,0,1,nil)
-		and re:IsHasType(EFFECT_TYPE_ACTIVATE) and Duel.IsChainNegatable(ev)
+		and (re:IsActiveType(TYPE_MONSTER) or re:IsHasType(EFFECT_TYPE_ACTIVATE)) and Duel.IsChainNegatable(ev)
 end
 --Activation legality
 function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
