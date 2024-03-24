@@ -15,7 +15,6 @@ function s.initial_effect(c)
 	e3:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
 	e3:SetCode(EVENT_TO_GRAVE)
 	e3:SetRange(LOCATION_MZONE)
-	e3:SetTarget(s.lptg)
 	e3:SetOperation(s.lpop)
 	c:RegisterEffect(e3)
 	-- SpecialSummon itself
@@ -30,14 +29,12 @@ function s.initial_effect(c)
 	e4:SetOperation(s.spop)
 	c:RegisterEffect(e4)
 end
-function s.lptg(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return true end
-	Duel.SetOperationInfo(0,CATEGORY_DAMAGE,nil,0,1-tp,300)
-end
 function s.lpop(e,tp,eg,ep,ev,re,r,rp)
-	local c=e:GetHandler()
-	if c:GetControler()~=tp or not c:IsRelateToEffect(e) or c:IsFacedown() then return end
-	Duel.Damage(1-tp,300,REASON_EFFECT)
+	local ct=eg:FilterCount(Card.IsPreviousLocation,nil,LOCATION_ONFIELD)
+	if ct>0 then
+		Duel.Hint(HINT_CARD,0,id)
+		Duel.Damage(1-tp,300,REASON_EFFECT)
+	end
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
