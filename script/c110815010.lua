@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
 	--Fusion Summon procedure
-	Fusion.AddProcMixRep(c,true,true,s.ffilter,1,99,aux.FilterBoolFunctionEx(Card.IsCode,CARD_SCHARHROT))
+	Fusion.AddProcMix(c,true,true,CARD_SCHARHROT,aux.FilterBoolFunctionEx(Card.IsType,TYPE_EFFECT))
 	--Change name
 	local e0=Effect.CreateEffect(c)
 	e0:SetType(EFFECT_TYPE_SINGLE)
@@ -46,9 +46,6 @@ function s.initial_effect(c)
 	e3:SetOperation(s.lpop)
 	c:RegisterEffect(e3)
 	
-end
-function s.ffilter(c,fc,sumtype,tp)
-	return c:IsType(TYPE_EFFECT,fc,sumtype,tp)
 end
 function s.tffilter(c,tp)
 	return c:IsSpellTrap() and c:IsType(TYPE_CONTINUOUS) and not c:IsForbidden() and c:CheckUniqueOnField(tp)

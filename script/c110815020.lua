@@ -1,6 +1,12 @@
 --질주하는 샤를할로트
 local s,id=GetID()
 function s.initial_effect(c)
+	--Activate
+	local e0=Effect.CreateEffect(c)
+	e0:SetType(EFFECT_TYPE_ACTIVATE)
+	e0:SetCode(EVENT_FREE_CHAIN)
+	e0:SetHintTiming(0,TIMING_END_PHASE)
+	c:RegisterEffect(e0)
 	--Send Grave
 	local e1=Effect.CreateEffect(c)
 	e1:SetDescription(aux.Stringid(id,0))
