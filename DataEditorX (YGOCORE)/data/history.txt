@@ -1,10 +1,10 @@
 # database history
+C:\Users\User\Desktop\EDO\cards.cdb
 C:\Users\User\Desktop\YGO Customs\customs.cdb
 C:\Users\User\Desktop\EDO\release-lede.cdb
 C:\Users\User\Desktop\EDO\prerelease-vjump-promos.cdb
 C:\Users\User\Desktop\EDO\prerelease-info.cdb
 C:\Users\User\Desktop\EDO\prerelease-dp29.cdb
-C:\Users\User\Desktop\EDO\cards.cdb
 C:\Users\User\Desktop\EDO\cards-unofficial.cdb
 C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
 C:\ProjectIgnis\expansions\cards.cdb
