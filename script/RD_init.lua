@@ -8,6 +8,7 @@
 -- archetype
 
 -- counter
+COUNTER_FD              = 0x1fa
 
 -- card Scharhrot
 CARD_YOUTH_BERK         = 110810001
