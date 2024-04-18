@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
     --XYZ summon
-	Xyz.AddProcedure(c,s.mfilter,4,3)
+	Xyz.AddProcedure(c,s.mfilter,3,3)
 	--Opponent cannot activate card or effects of cards they control for the rest of the turn
 	local e1=Effect.CreateEffect(c)
 	e1:SetDescription(aux.Stringid(id,0))
