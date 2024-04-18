@@ -10,6 +10,7 @@ function s.initial_effect(c)
 	e1:SetRange(LOCATION_HAND|LOCATION_GRAVE)
 	e1:SetHintTiming(0,TIMING_MAIN_END+TIMINGS_CHECK_MONSTER)
 	e1:SetCountLimit(1,id)
+	e1:SetCondition(function() return Duel.IsMainPhase() end)
 	e1:SetTarget(s.selfsptg)
 	e1:SetOperation(s.selfspop)
 	c:RegisterEffect(e1)
@@ -38,7 +39,8 @@ function s.initial_effect(c)
 end
 s.listed_names={CARD_FD_DRAGONIS}
 function s.selfsptg(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return Duel.IsExistingMatchingCard(aux.TRUE,tp,LOCATION_ONFIELD|LOCATION_HAND,0,1,nil)
+	local c=e:GetHandler()
+	if chk==0 then return Duel.IsExistingMatchingCard(aux.TRUE,tp,LOCATION_ONFIELD|LOCATION_HAND,0,1,c,tp)
 		and c:IsCanBeSpecialSummoned(e,0,tp,false,false) end
 	Duel.SetOperationInfo(0,CATEGORY_DESTROY,nil,1,tp,LOCATION_HAND|LOCATION_MZONE)
 	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,c,1,tp,0)
