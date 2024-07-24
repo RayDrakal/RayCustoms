@@ -6,6 +6,8 @@
 
 
 -- archetype
+SET_BLUEWAVE            = 0x5a1
+SET_SLIPWAVE            = 0x5a2
 
 -- counter
 
