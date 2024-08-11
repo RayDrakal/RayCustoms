@@ -81,7 +81,7 @@ function s.cfilter(c)
     return c:IsSetCard(SET_BLUEWAVE) and c:IsLinkAbove(4)
 end
 function s.handcon(e)
-	return Duel.IsExistingMatchingCard(s.cfilter,tp,LOCATION_MZONE,0,1,nil)
+	return Duel.IsExistingMatchingCard(s.cfilter,e:GetHandlerPlayer(),LOCATION_MZONE,0,1,nil)
 end
 function s.thfilter(c,tp,fnd_chk)
 	if not c:IsAbleToHand() then return false end
