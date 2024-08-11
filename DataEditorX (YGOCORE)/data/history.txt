@@ -1,6 +1,6 @@
 # database history
-C:\Users\User\Desktop\EDO\cards.cdb
 C:\Users\User\Desktop\YGO Customs\customs.cdb
+C:\Users\User\Desktop\EDO\cards.cdb
 C:\Users\User\Desktop\EDO\prerelease-vjump-promos.cdb
 C:\Users\User\Desktop\EDO\prerelease-sd47.cdb
 C:\Users\User\Desktop\EDO\cards-unofficial.cdb
