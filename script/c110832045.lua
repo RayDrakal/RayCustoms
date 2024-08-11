@@ -60,8 +60,8 @@ function s.tdop(e,tp,eg,ep,ev,re,r,rp)
 	Duel.BreakEffect()
 	Duel.Draw(tp,1,REASON_EFFECT)
 end
-function s.dfilter(c)
-    return c.IsAttribute(ATTRIBUTE_WATER) and c.IsType(TYPE_LINK)
+function s.dfilter(c,tp)
+    return c:IsAttribute(ATTRIBUTE_WATER) and c:IsType(TYPE_LINK)
 end
 function s.drcon(e,tp,eg,ep,ev,re,r,rp)
 	return eg:IsExists(s.dfilter,1,nil)
