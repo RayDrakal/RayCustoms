@@ -3,6 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	--Activate
 	local e1=Fusion.CreateSummonEff(c,aux.FilterBoolFunction(Card.ListsCodeAsMaterial,CARD_SCHARHROT),nil,s.fextra)
+	e1:SetDescription(aux.Stringid(id,0))
 	e1:SetHintTiming(0,TIMING_MAIN_END)
 	e1:SetCountLimit(1,id)
 	c:RegisterEffect(e1)
