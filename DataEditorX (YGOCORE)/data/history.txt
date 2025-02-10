@@ -1,12 +1,9 @@
 # database history
-C:\Users\User\Desktop\YGO Customs\customs.cdb
-C:\Users\User\Desktop\EDO\prerelease-vjump-promos.cdb
-C:\Users\User\Desktop\EDO\release-rota.cdb
-C:\Users\User\Desktop\EDO\prerelease-suda.cdb
+C:\Users\User\Desktop\EDO\otcard_non-pre.cdb
+C:\Users\User\Desktop\EDO\pre-dbjh.cdb
+C:\Users\User\Desktop\EDO\pre-etc.cdb
+C:\Users\User\Desktop\EDO\main-repo-rush.cdb
+C:\Users\User\Desktop\EDO\main-repo.cdb
 C:\Users\User\Desktop\EDO\cards.cdb
-C:\ProjectIgnis\repositories\languages\한국어\cards-rush.cdb
-C:\Users\User\Desktop\EDO\prerelease-sd47.cdb
-C:\Users\User\Desktop\EDO\cards-unofficial.cdb
-C:\ProjectIgnis\repositories\languages\한국어\cards.cdb
-C:\ProjectIgnis\expansions\cards.cdb
+C:\Users\User\Desktop\RayCustoms\customs.cdb
 # script history
