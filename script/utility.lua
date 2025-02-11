@@ -2649,6 +2649,7 @@ function Auxiliary.DefaultFieldReturnOp(rg)
 	select_field_return_cards(1-turn_p,g1)
 end
 
+pcall(dofile,"RD_init.lua")
 Duel.LoadScript("debug_utility.lua")
 Duel.LoadScript("cards_specific_functions.lua")
 Duel.LoadScript("proc_fusion.lua")
@@ -2670,5 +2671,4 @@ Duel.LoadScript("proc_gemini.lua")
 Duel.LoadScript("proc_spirit.lua")
 Duel.LoadScript("proc_unofficial.lua")
 Duel.LoadScript("deprecated_functions.lua")
-Duel.LoadScript("RD_init.lua")
 pcall(dofile,"init.lua")
