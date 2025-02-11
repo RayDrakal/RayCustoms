@@ -65,12 +65,12 @@ function s.desop(e,tp,eg,ep,ev,re,r,rp)
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_DESTROY)
 	local g=Duel.SelectMatchingCard(tp,nil,tp,LOCATION_ONFIELD,LOCATION_ONFIELD,1,1,nil)
 	if #g>0 and Duel.Destroy(g,REASON_EFFECT)>0 then
-		local e1=Effect.CreateEffect(c)
+		local e1=Effect.CreateEffect(e:GetHandler())
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_UPDATE_ATTACK)
 		e1:SetValue(800)
-		e1:SetReset(RESET_EVENT|RESETS_STANDARD_DISABLE)
-		c:RegisterEffect(e1)
+		e1:SetReset(RESET_EVENT+RESETS_STANDARD_DISABLE)
+		e:GetHandler():RegisterEffect(e1)
 	end
 end
 function s.negtg(e,tp,eg,ep,ev,re,r,rp,chk)
