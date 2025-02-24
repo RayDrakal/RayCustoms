@@ -1,1 +1,0 @@
-Duel.LoadScript("RD_constants.lua")
