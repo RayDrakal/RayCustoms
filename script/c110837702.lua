@@ -46,7 +46,7 @@ function s.rpop(e,tp,eg,ep,ev,re,r,rp)
 			local e3=Effect.CreateEffect(c)
 			e3:SetDescription(aux.Stringid(id,2))
 			e3:SetType(EFFECT_TYPE_SINGLE)
-			e3:SetCode(EFFECT_TRAP_ACT_IN_SET_TURN)
+			e3:SetCode(EFFECT_QP_ACT_IN_SET_TURN)
 			e3:SetProperty(EFFECT_FLAG_SET_AVAILABLE)
 			c:RegisterEffect(e3)
 		end

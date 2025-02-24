@@ -1,6 +1,6 @@
 # database history
-C:\Users\User\Desktop\EDO\cards.cdb
 C:\Users\User\Desktop\RayCustoms\custom_xgalaxy.cdb
+C:\Users\User\Desktop\EDO\cards.cdb
 C:\Users\User\Desktop\EDO\pre-etc.cdb
 C:\Users\User\Desktop\EDO\pre-duad.cdb
 C:\Users\User\Desktop\EDO\pre-dbjh.cdb
