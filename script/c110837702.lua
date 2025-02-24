@@ -43,13 +43,12 @@ function s.rpop(e,tp,eg,ep,ev,re,r,rp)
 		if c:IsRelateToEffect(e) and c:IsSSetable() then
 			Duel.SSet(tp,c)
             --Can be activated this turn
-			local e1=Effect.CreateEffect(c)
-			e1:SetDescription(aux.Stringid(id,2))
-			e1:SetType(EFFECT_TYPE_SINGLE)
-			e1:SetCode(EFFECT_TRAP_ACT_IN_SET_TURN)
-			e1:SetProperty(EFFECT_FLAG_SET_AVAILABLE)
-			e1:SetReset(RESET_EVENT|RESETS_STANDARD)
-			c:RegisterEffect(e1)
+			local e3=Effect.CreateEffect(c)
+			e3:SetDescription(aux.Stringid(id,2))
+			e3:SetType(EFFECT_TYPE_SINGLE)
+			e3:SetCode(EFFECT_TRAP_ACT_IN_SET_TURN)
+			e3:SetProperty(EFFECT_FLAG_SET_AVAILABLE)
+			c:RegisterEffect(e3)
 		end
     end
 end
