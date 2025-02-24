@@ -2,7 +2,7 @@
 local s,id=GetID()
 function s.initial_effect(c)
 	--Activate
-	local e1=Fusion.CreateSummonEff{handler=c,fusfilter=aux.FilterBoolFunction(Card.IsSetCard,SET_METARION),matfilter=aux.FALSE,extarfil=s.fextra}
+	local e1=Fusion.CreateSummonEff{handler=c,fusfilter=aux.FilterBoolFunction(Card.IsSetCard,SET_METARION),extrafil=s.fextra}
 	e1:SetHintTiming(0,TIMINGS_CHECK_MONSTER_E)
 	c:RegisterEffect(e1)
     --Return
@@ -20,7 +20,7 @@ function s.initial_effect(c)
     c:RegisterEffect(e2)
 end
 function s.fextra(e,tp,mg)
-	return Duel.GetMatchingGroup(Fusion.IsMonsterFilter(Card.IsFaceup),tp,LOCATION_HAND|LOCATION_ONFIELD,LOCATION_ONFIELD,nil)
+	return Duel.GetMatchingGroup(Fusion.IsMonsterFilter(Card.IsFaceup),tp,0,LOCATION_ONFIELD,nil)
 end
 function s.effcon(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.IsExistingMatchingCard(aux.FaceupFilter(Card.IsSetCard,SET_METARION),tp,LOCATION_ONFIELD,0,1,nil) and Duel.IsMainPhase()
