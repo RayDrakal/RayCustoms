@@ -1,9 +1,9 @@
 # database history
+C:\Users\User\Desktop\EDO\cards.cdb
+C:\Users\User\Desktop\RayCustoms\custom_xgalaxy.cdb
 C:\Users\User\Desktop\EDO\pre-etc.cdb
 C:\Users\User\Desktop\EDO\pre-duad.cdb
 C:\Users\User\Desktop\EDO\pre-dbjh.cdb
 C:\Users\User\Desktop\EDO\otcard_non-pre.cdb
 C:\Users\User\Desktop\EDO\main-repo.cdb
-C:\Users\User\Desktop\EDO\cards.cdb
-C:\Users\User\Desktop\RayCustoms\custom_xgalaxy.cdb
 # script history
