@@ -14,6 +14,7 @@ SET_DARKMATTER          = 0x6a5
 SET_VOIDVERG            = 0x6a6
 SET_IMAGINARY           = 0x6a7
 SET_METARION            = 0x6a8
+SET_ZANKYA              = 0x6a9
 
 -- counter
 
