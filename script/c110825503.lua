@@ -11,6 +11,16 @@ function s.initial_effect(c)
 	e2:SetTarget(s.sptg)
 	e2:SetOperation(s.spop)
 	c:RegisterEffect(e2)
+	--Remove 1 card from either grave
+	local e3=Effect.CreateEffect(c)
+	e3:SetDescription(aux.Stringid(id,1))
+	e3:SetCategory(CATEGORY_REMOVE)
+	e3:SetType(EFFECT_TYPE_TRIGGER_O)
+	e3:SetProperty(EFFECT_FLAG_DELAY)
+	e3:SetCode(EVENT_REMOVE)
+	e3:SetTarget(s.rmtg)
+	e3:SetOperation(s.rmop)
+	c:RegisterEffect(e3)
 	
 end
 function s.costfilter(c,tp)
@@ -43,5 +53,24 @@ function s.spop(e,tp,eg,ep,ev,re,r,rp)
 			Duel.ShuffleHand(tp)
 			Duel.Draw(tp,1,REASON_EFFECT)
 		end
+	end
+end
+function s.rmtg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return not Duel.IsPlayerAffectedByEffect(e:GetHandlerPlayer(),69832741) 
+		and Duel.IsExistingMatchingCard(Card.IsAbleToRemove,tp,LOCATION_GRAVE,0,1,nil)
+		and Duel.IsExistingMatchingCard(Card.IsAbleToRemove,tp,0,LOCATION_GRAVE,1,nil) end
+	Duel.SetOperationInfo(0,CATEGORY_REMOVE,nil,2,PLAYER_EITHER,LOCATION_GRAVE)
+end
+function s.rmop(e,tp,eg,ep,ev,re,r,rp)
+	local g1=Duel.GetMatchingGroup(Card.IsAbleToRemove,tp,LOCATION_GRAVE,0,nil)
+	local g2=Duel.GetMatchingGroup(Card.IsAbleToRemove,tp,0,LOCATION_GRAVE,nil)
+	if #g1>0 and #g2>0 then
+		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
+		local sg1=g1:Select(tp,1,1,nil)
+		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_REMOVE)
+		local sg2=g2:Select(tp,1,1,nil)
+		sg1:Merge(sg2)
+		Duel.HintSelection(sg1,true)
+		Duel.Remove(sg1,POS_FACEUP,REASON_EFFECT)
 	end
 end
