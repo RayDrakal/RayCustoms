@@ -46,17 +46,17 @@ function s.rmop(e,tp,eg,ep,ev,re,r,rp)
 		if #rg>0 then
 			Duel.BreakEffect()
 			Duel.Remove(rg,POS_FACEUP,REASON_EFFECT)
+			--Cannot Special Summon monsters for the rest of the turn, except Dragon monsters
+			local e1=Effect.CreateEffect(c)
+			e1:SetDescription(aux.Stringid(id,3))
+			e1:SetType(EFFECT_TYPE_FIELD)
+			e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET+EFFECT_FLAG_CLIENT_HINT)
+			e1:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
+			e1:SetTargetRange(1,0)
+			e1:SetTarget(function(e,c) return not c:IsAttribute(ATTRIBUTE_WATER) end)
+			e1:SetReset(RESET_PHASE|PHASE_END)
+			Duel.RegisterEffect(e1,tp)
 		end
-		--Cannot Special Summon monsters for the rest of the turn, except Dragon monsters
-		local e1=Effect.CreateEffect(c)
-		e1:SetDescription(aux.Stringid(id,3))
-		e1:SetType(EFFECT_TYPE_FIELD)
-		e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET+EFFECT_FLAG_CLIENT_HINT)
-		e1:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
-		e1:SetTargetRange(1,0)
-		e1:SetTarget(function(e,c) return not c:IsAttribute(ATTRIBUTE_WATER) end)
-		e1:SetReset(RESET_PHASE|PHASE_END)
-		Duel.RegisterEffect(e1,tp)
 	end
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
