@@ -43,14 +43,14 @@ function s.initial_effect(c)
     c:RegisterEffect(e4)
 	
 end
-function s.ovfilter(c,tp,lc)
-	return c:IsFaceup() and c:IsSummonCode(lc,SUMMON_TYPE_XYZ,tp,58820923)
+function s.ovfilter(c,tp,xyzc)
+	return c:IsFaceup() and c:IsSetCard(0x107b,xyzc,SUMMON_TYPE_XYZ,tp) and c:IsType(TYPE_XYZ,xyzc,SUMMON_TYPE_XYZ,tp)
 end
 function s.atkval(e,c)
 	return Duel.GetMatchingGroupCount(s.atkfilter,0,0x14,0x14,nil)*500
 end
 function s.atkfilter(c)
-	return c:IsRace(RACE_DRAGON) and (c:IsLocation(LOCATION_GRAVE|LOCATION_REMOVED) or c:IsFaceup())
+	return c:IsRace(RACE_DRAGON) and (c:IsLocation(LOCATION_GRAVE|LOCATION_REMOVED|LOCATION_ONFIELD) or c:IsFaceup())
 end
 function s.econ(e)
 	return e:GetHandler():GetOverlayGroup():IsExists(Card.IsSetCard,1,nil,0x107b)
