@@ -78,7 +78,8 @@ function s.disop(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function s.lpop(e,tp,eg,ep,ev,re,r,rp)
+	local ct=eg:FilterCount(nil,nil,tp)*500
 	Duel.Hint(HINT_CARD,0,id)
-	Duel.Damage(1-tp,500,REASON_EFFECT)
-	Duel.Recover(tp,500,REASON_EFFECT)
+	Duel.Damage(1-tp,ct,REASON_EFFECT)
+	Duel.Recover(tp,ct,REASON_EFFECT)
 end

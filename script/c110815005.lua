@@ -30,10 +30,10 @@ function s.initial_effect(c)
 	c:RegisterEffect(e4)
 end
 function s.lpop(e,tp,eg,ep,ev,re,r,rp)
-	local ct=eg:FilterCount(Card.IsPreviousLocation,nil,LOCATION_ONFIELD)
+	local ct=eg:FilterCount(Card.IsPreviousLocation,nil,LOCATION_ONFIELD)*300
 	if ct>0 then
 		Duel.Hint(HINT_CARD,0,id)
-		Duel.Damage(1-tp,300,REASON_EFFECT)
+		Duel.Damage(1-tp,ct,REASON_EFFECT)
 	end
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)

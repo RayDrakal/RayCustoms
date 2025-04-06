@@ -51,10 +51,10 @@ function s.operation(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function s.lpop(e,tp,eg,ep,ev,re,r,rp)
-	local ct=eg:FilterCount(Card.IsPreviousLocation,nil,LOCATION_ONFIELD)
+	local ct=eg:FilterCount(Card.IsPreviousLocation,nil,LOCATION_ONFIELD)*300
 	if ct>0 then
 		Duel.Hint(HINT_CARD,0,id)
-		Duel.Recover(tp,300,REASON_EFFECT)
+		Duel.Recover(tp,ct,REASON_EFFECT)
 	end
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
