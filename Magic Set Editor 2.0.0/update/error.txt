@@ -1,4 +1,0 @@
-﻿font/fonts-jp.zip	1cd5aa21f90c7a463e52938c039f19d1
-font/fonts-cn.zip	59eb6d02fff325351eb98ea10575cc7d
-font/fonts-common.zip	09586aeb09ad47a744632a934b2a4b09
-font/fonts-tw.zip	d4ca4f877edcd92433e78d8b4c5f2960
