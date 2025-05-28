@@ -53,14 +53,14 @@ function s.tdoperation(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function s.atttg(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return Duel.IsExistingMatchingCard(s.attfilter,tp,LOCATION_DECK,LOCATION_DECK,1,nil,e)
+	if chk==0 then return Duel.IsExistingMatchingCard(s.attfilter,tp,LOCATION_GRAVE,LOCATION_GRAVE,1,nil,e)
 		and e:GetHandler():IsType(TYPE_XYZ) end
 end
 function s.attop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	if not c:IsRelateToEffect(e) or c:IsFacedown() then return end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_XMATERIAL)
-	local tc=Duel.SelectMatchingCard(tp,s.attfilter,tp,LOCATION_DECK,LOCATION_DECK,1,1,nil,e):GetFirst()
+	local tc=Duel.SelectMatchingCard(tp,s.attfilter,tp,LOCATION_GRAVE,LOCATION_GRAVE,1,1,nil,e):GetFirst()
 	if tc then
 		Duel.Overlay(c,tc,true)
 	end
