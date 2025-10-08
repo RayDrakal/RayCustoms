@@ -58,7 +58,7 @@ function s.attachtg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	end
 end
 function s.attachfilter2(c,tp)
-	return c:IsRace(RACE_DRAGON) and Duel.IsExistingMatchingCard(s.xyzfilter,tp,LOCATION_MZONE,0,1,nil,c,tp)
+	return c:IsRace(RACE_DRAGON) and c:IsType(TYPE_MONSTER) and Duel.IsExistingMatchingCard(s.xyzfilter,tp,LOCATION_MZONE,0,1,nil,c,tp)
 end
 function s.xyzfilter(c,mc,tp)
 	return c:IsType(TYPE_XYZ) and c:IsRace(RACE_DRAGON) and c:IsFaceup() and mc:IsCanBeXyzMaterial(c,tp,REASON_EFFECT)
@@ -67,17 +67,18 @@ function s.attachop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	local tc=Duel.GetFirstTarget()
 	if c:IsRelateToEffect(e) and tc:IsRelateToEffect(e) 
-    and not tc:IsImmuneToEffect(e) 
-    and Duel.Overlay(tc,c)
-    and Duel.IsExistingMatchingCard(s.attachfilter2,tp,LOCATION_DECK|LOCATION_GRAVE,0,1,nil,tp)
-	and Duel.SelectYesNo(tp,aux.Stringid(id,3)) then
-		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATTACH)
-		local mc=Duel.SelectMatchingCard(tp,s.attachfilter2,tp,LOCATION_DECK|LOCATION_GRAVE,0,1,1,nil,tp):GetFirst()
-		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
-		local xyzc=Duel.SelectMatchingCard(tp,s.xyzfilter,tp,LOCATION_MZONE,0,1,1,nil,mc,tp):GetFirst()
-		if not xyzc:IsImmuneToEffect(e) then
-			Duel.BreakEffect()
-			Duel.Overlay(xyzc,mc)
-		end
-	end
+    and not tc:IsImmuneToEffect(e) then
+        Duel.Overlay(tc,c)
+        if Duel.IsExistingMatchingCard(s.attachfilter2,tp,LOCATION_DECK,0,1,nil,tp)
+		and Duel.SelectYesNo(tp,aux.Stringid(id,3)) then
+            Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATTACH)
+            local mc=Duel.SelectMatchingCard(tp,s.attachfilter2,tp,LOCATION_DECK,0,1,1,nil,tp):GetFirst()
+            Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+            local xyzc=Duel.SelectMatchingCard(tp,s.xyzfilter,tp,LOCATION_MZONE,0,1,1,nil,mc,tp):GetFirst()
+            if not xyzc:IsImmuneToEffect(e) then
+                Duel.BreakEffect()
+                Duel.Overlay(xyzc,mc)
+            end
+        end
+    end 
 end
