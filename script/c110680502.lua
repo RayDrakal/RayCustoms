@@ -12,5 +12,5 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 function s.xyzcon(e,tp,eg,ep,ev,re,r,rp)
-	return e:GetHandler():IsSetCard(SET_TACHYON)
+	return e:GetHandler():IsSetCard(SET_GALAXY_EYES_TACHYON_DRAGON)
 end
