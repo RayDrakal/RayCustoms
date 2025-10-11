@@ -20,15 +20,14 @@ function s.initial_effect(c)
 	e2:SetTarget(s.attachtg)
 	e2:SetOperation(s.attachop)
 	c:RegisterEffect(e2)
-	local e3a=Effect.CreateEffect(c)
-	e3a:SetDescription(aux.Stringid(id,2))
-	e3a:SetType(EFFECT_TYPE_XMATERIAL)
-	e3a:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
-	e3a:SetCondition(s.xyzcon)
-	e3a:SetRange(LOCATION_MZONE)
-	e3a:SetCode(EFFECT_CANNOT_RELEASE)
-	e3a:SetValue(1)
-	c:RegisterEffect(e3a)
+	local e3=Effect.CreateEffect(c)
+	e3:SetType(EFFECT_TYPE_XMATERIAL)
+	e3:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e3:SetCondition(s.xyzcon)
+	e3:SetCode(EFFECT_UPDATE_ATTACK)
+	e3:SetRange(LOCATION_MZONE)
+	e3:SetValue(s.atkval)
+	c:RegisterEffect(e3)
 end
 function s.selfspconfilter(c)
 	return c:IsLevel(8) and c:IsRace(RACE_DRAGON) and c:IsFaceup()
@@ -81,4 +80,9 @@ function s.attachop(e,tp,eg,ep,ev,re,r,rp)
             end
         end
     end 
+end
+function s.atkval(e,c)
+	local g=c:GetOverlayGroup()
+	local sum=g:GetSum(Card.GetLevel)+g:GetSum(Card.GetRank)
+	return sum*100
 end
