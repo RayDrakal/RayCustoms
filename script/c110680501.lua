@@ -26,10 +26,11 @@ function s.initial_effect(c)
 	e3a:SetCondition(s.xyzcon)
 	e3a:SetCode(EFFECT_UPDATE_ATTACK)
 	e3a:SetRange(LOCATION_MZONE)
-	e3a:SetValue(s.val)
+	e3a:SetValue(s.upval)
 	c:RegisterEffect(e3a)
 	local e3b=e3a:Clone()
 	e3b:SetCode(EFFECT_UPDATE_DEFENSE)
+	e3b:SetValue(s.upval)
 	c:RegisterEffect(e3b)
 end
 function s.selfspconfilter(c)
@@ -84,7 +85,7 @@ function s.attachop(e,tp,eg,ep,ev,re,r,rp)
         end
     end 
 end
-function s.val(e,c)
+function s.upval(e,c)
 	local g=c:GetOverlayGroup()
 	local sum=g:GetSum(Card.GetLevel)+g:GetSum(Card.GetRank)
 	return sum*100
