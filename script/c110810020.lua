@@ -1,4 +1,4 @@
---진취의 기사
+--수호의 거신상 라브리스
 local s,id=GetID()
 function s.initial_effect(c)
 	

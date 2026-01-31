@@ -1,4 +1,4 @@
---진취의 기사
+--영광의 수호진
 local s,id=GetID()
 function s.initial_effect(c)
 	

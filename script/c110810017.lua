@@ -1,4 +1,4 @@
---진취의 기사
+--레볼 스타일 - 이그지스트
 local s,id=GetID()
 function s.initial_effect(c)
 	
