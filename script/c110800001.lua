@@ -1,6 +1,8 @@
 --원죄의 초극룡
 local s,id=GetID()
 function s.initial_effect(c)
+	c:EnableReviveLimit()
+	Link.AddProcedure(c,aux.FilterBoolFunctionEx(Card.IsLevelBelow,4),1,1)
 	--Neither monster can be destroyed by battle
 	local e0=Effect.CreateEffect(c)
 	e0:SetType(EFFECT_TYPE_FIELD)
